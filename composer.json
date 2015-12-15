@@ -1,0 +1,22 @@
+{
+	"name": "fab/carousel-gallery",
+	"type": "typo3-cms-extension",
+	"description": "Carousel gallery.",
+	"homepage": "https://github.com/Ecodev/carousel_gallery",
+	"license": [
+		"GPL-2.0+"
+	],
+	"keywords": [
+		"TYPO3 CMS",
+		"Photo Gallery"
+	],
+	"support": {
+		"issues": "https://github.com/Ecodev/carousel_gallery/issues"
+	},
+	"autoload": {
+		"psr-4": {
+			"Fab\\CarouselGallery\\": "Classes"
+		}
+	},
+	"version": "1.0.0-dev"
+}
