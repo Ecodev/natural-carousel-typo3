@@ -17,7 +17,6 @@ namespace Fab\CarouselGallery\Controller;
 use Fab\CarouselGallery\Persistence\MatcherFactory;
 use Fab\CarouselGallery\Persistence\OrderFactory;
 use Fab\Vidi\Domain\Repository\ContentRepositoryFactory;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 /**
@@ -25,11 +24,6 @@ use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
  */
 class GalleryController extends ActionController
 {
-    /**
-     * @var \Fab\CarouselGallery\Domain\Repository\CategoryRepository
-     * @inject
-     */
-    protected $categoryRepository;
 
     /**
     /**
@@ -69,8 +63,6 @@ class GalleryController extends ActionController
         $this->view->assign('images', $images);
         $this->view->assign('numberOfVisibleImages', $this->settings['limit'] > $totalNumberOfImages ? $totalNumberOfImages : $this->settings['limit']);
 
-        $identifiers = GeneralUtility::trimExplode(',', $this->settings['categories'], TRUE);
-        $this->view->assign('categories', $this->categoryRepository->findByIdentifiers($identifiers));
     }
 
 }
