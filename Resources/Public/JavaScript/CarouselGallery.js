@@ -23,9 +23,9 @@
                 }
 
                 gallery.swiper = new Swiper(gallery.rootElement.selector, {
-                    pagination: '.swiper-pagination',
-                    nextButton: '.swiper-button-next',
-                    prevButton: '.swiper-button-prev',
+                    pagination: '#swiper-pagination-' + gallery.id,
+                    nextButton: '#swiper-button-next-' + gallery.id,
+                    prevButton: '#swiper-button-prev-' + gallery.id,
 
                     loop: gallery.loop,
                     speed: gallery.transitionTime,
