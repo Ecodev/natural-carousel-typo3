@@ -142,6 +142,18 @@
                             </config>
                         </TCEforms>
                     </settings.waitTime>
+                    <settings.transitionTime>
+                        <TCEforms>
+                            <label>
+                                Transition time
+                            </label>
+                            <config>
+                                <type>input</type>
+                                <default>1000</default>
+                                <eval>trim</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.transitionTime>
                     <settings.autoReplay>
                         <TCEforms>
                             <label>
@@ -164,19 +176,6 @@
                             </config>
                         </TCEforms>
                     </settings.loop>
-
-                    <settings.transitionTime>
-                        <TCEforms>
-                            <label>
-                                Transition time
-                            </label>
-                            <config>
-                                <type>input</type>
-                                <default>1000</default>
-                                <eval>trim</eval>
-                            </config>
-                        </TCEforms>
-                    </settings.transitionTime>
                     <settings.freeMode>
                         <TCEforms>
                             <label>
@@ -191,7 +190,7 @@
                     <settings.showThumbnails>
                         <TCEforms>
                             <label>
-                                Free mode
+                                Show thumbnails
                             </label>
                             <config>
                                 <type>check</type>

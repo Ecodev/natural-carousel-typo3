@@ -41,9 +41,6 @@ class GalleryController extends ActionController
      */
     public function listAction()
     {
-        if (!isset($this->settings['imagesPerRow'])) {
-            return '<strong style="color: red">Please save your plugin settings in the BE beforehand.</strong>';
-        }
 
         // Initialize some objects related to the query.
         $matcher = MatcherFactory::getInstance($this->settings)->getMatcher();
@@ -54,14 +51,11 @@ class GalleryController extends ActionController
 
         // Fetch and count files
         $images = $contentRepository->findBy($matcher, $order);
-        $totalNumberOfImages = $contentRepository->countBy($matcher);
 
         // Assign template variables
-        $this->view->assign('totalNumberOfImages', $totalNumberOfImages);
         $this->view->assign('settings', $this->settings);
         $this->view->assign('data', $this->configurationManager->getcontentObject()->data);
         $this->view->assign('images', $images);
-        $this->view->assign('numberOfVisibleImages', $this->settings['limit'] > $totalNumberOfImages ? $totalNumberOfImages : $this->settings['limit']);
 
     }
 
