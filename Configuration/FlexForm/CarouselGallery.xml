@@ -112,6 +112,97 @@
             </ROOT>
         </sorting>
 
+        <slideSettings>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Slide settings</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.autoPlay>
+                        <TCEforms>
+                            <label>
+                                Auto Play
+                            </label>
+                            <config>
+                                <type>check</type>
+                                <default>1</default>
+                            </config>
+                        </TCEforms>
+                    </settings.autoPlay>
+                    <settings.waitTime>
+                        <TCEforms>
+                            <label>
+                                Wait time
+                            </label>
+                            <config>
+                                <type>input</type>
+                                <default>3000</default>
+                                <eval>trim</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.waitTime>
+                    <settings.autoReplay>
+                        <TCEforms>
+                            <label>
+                                Play again after interaction
+                            </label>
+                            <config>
+                                <type>check</type>
+                                <default>1</default>
+                            </config>
+                        </TCEforms>
+                    </settings.autoReplay>
+                    <settings.loop>
+                        <TCEforms>
+                            <label>
+                                Loop
+                            </label>
+                            <config>
+                                <type>check</type>
+                                <default>1</default>
+                            </config>
+                        </TCEforms>
+                    </settings.loop>
+
+                    <settings.transitionTime>
+                        <TCEforms>
+                            <label>
+                                Transition time
+                            </label>
+                            <config>
+                                <type>input</type>
+                                <default>1000</default>
+                                <eval>trim</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.transitionTime>
+                    <settings.freeMode>
+                        <TCEforms>
+                            <label>
+                                Free mode
+                            </label>
+                            <config>
+                                <type>check</type>
+                                <default>1</default>
+                            </config>
+                        </TCEforms>
+                    </settings.freeMode>
+                    <settings.showThumbnails>
+                        <TCEforms>
+                            <label>
+                                Free mode
+                            </label>
+                            <config>
+                                <type>check</type>
+                                <default>0</default>
+                            </config>
+                        </TCEforms>
+                    </settings.showThumbnails>
+                </el>
+            </ROOT>
+        </slideSettings>
+
         <imageSettings>
             <ROOT>
                 <TCEforms>
@@ -119,7 +210,7 @@
                 </TCEforms>
                 <type>array</type>
                 <el>
-                    <settings.thumbnailFormat>
+                    <settings.format>
                         <TCEforms>
                             <label>
                                 LLL:EXT:carousel_gallery/Resources/Private/Language/locallang.xlf:settings.thumbnailFormat
@@ -144,35 +235,11 @@
                                 <maxitems>1</maxitems>
                             </config>
                         </TCEforms>
-                    </settings.thumbnailFormat>
-                    <settings.imagesPerRow>
+                    </settings.format>
+                    <settings.slidesPerView>
                         <TCEforms>
                             <label>
-                                LLL:EXT:carousel_gallery/Resources/Private/Language/locallang.xlf:settings.imagesPerRow
-                            </label>
-                            <config>
-                                <type>input</type>
-                                <default>4</default>
-                                <eval>trim</eval>
-                            </config>
-                        </TCEforms>
-                    </settings.imagesPerRow>
-                    <settings.limit>
-                        <TCEforms>
-                            <label>
-                                LLL:EXT:carousel_gallery/Resources/Private/Language/locallang.xlf:settings.limit
-                            </label>
-                            <config>
-                                <type>input</type>
-                                <default>0</default>
-                                <eval>trim</eval>
-                            </config>
-                        </TCEforms>
-                    </settings.limit>
-                    <settings.margin>
-                        <TCEforms>
-                            <label>
-                                LLL:EXT:carousel_gallery/Resources/Private/Language/locallang.xlf:settings.margin
+                                Slides per view
                             </label>
                             <config>
                                 <type>input</type>
@@ -180,58 +247,46 @@
                                 <eval>trim</eval>
                             </config>
                         </TCEforms>
+                    </settings.slidesPerView>
+                    <settings.margin>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:carousel_gallery/Resources/Private/Language/locallang.xlf:settings.margin
+                            </label>
+                            <config>
+                                <type>input</type>
+                                <default>10</default>
+                                <eval>trim</eval>
+                            </config>
+                        </TCEforms>
                     </settings.margin>
-                    <settings.round>
+                    <settings.slideHeight>
                         <TCEforms>
                             <label>
-                                LLL:EXT:carousel_gallery/Resources/Private/Language/locallang.xlf:settings.round
+                                Slide height
                             </label>
                             <config>
                                 <type>input</type>
+                                <default>400</default>
                                 <eval>trim</eval>
                             </config>
                         </TCEforms>
-                    </settings.round>
-                    <settings.thumbnailMaximumHeight>
+                    </settings.slideHeight>
+                    <settings.thumbnailHeight>
                         <TCEforms>
                             <label>
-                                LLL:EXT:carousel_gallery/Resources/Private/Language/locallang.xlf:settings.thumbnailMaximumHeight
+                                Thumbnails height
                             </label>
                             <config>
                                 <type>input</type>
-                                <default>300</default>
+                                <default>100</default>
                                 <eval>trim</eval>
                             </config>
                         </TCEforms>
-                    </settings.thumbnailMaximumHeight>
-                    <settings.enlargedImageMaximumWidth>
-                        <TCEforms>
-                            <label>
-                                LLL:EXT:carousel_gallery/Resources/Private/Language/locallang.xlf:settings.enlargedImageMaximumWidth
-                            </label>
-                            <config>
-                                <type>input</type>
-                                <default>1600</default>
-                                <eval>trim</eval>
-                            </config>
-                        </TCEforms>
-                    </settings.enlargedImageMaximumWidth>
-                    <settings.enlargedImageMaximumHeight>
-                        <TCEforms>
-                            <label>
-                                LLL:EXT:carousel_gallery/Resources/Private/Language/locallang.xlf:settings.enlargedImageMaximumHeight
-                            </label>
-                            <config>
-                                <type>input</type>
-                                <eval>trim</eval>
-                            </config>
-                        </TCEforms>
-                    </settings.enlargedImageMaximumHeight>
+                    </settings.thumbnailHeight>
                 </el>
             </ROOT>
-
         </imageSettings>
-
 
     </sheets>
 </T3DataStructure>
