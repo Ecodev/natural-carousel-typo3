@@ -1,0 +1,12 @@
+.swiper-container {
+    height: 400px;
+}
+
+.swiper-slide {
+    background-size:cover;
+    background-position: center center;
+}
+/*.swiper-slide img {*/
+    /*width:100%;*/
+    /*min-width:100%;*/
+/*}*/
