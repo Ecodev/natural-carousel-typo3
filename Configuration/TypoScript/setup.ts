@@ -16,6 +16,13 @@ plugin.tx_carouselgallery {
 
 		asset {
 
+			SwiperCss {
+				path = EXT:carousel_gallery/Resources/Public/StyleSheets/swiper.min.css
+				type = css
+
+				# Optional key if loading assets through EXT:vhs.
+				dependencies = mainCss
+			}
 			CarouselGalleryCss {
 				path = EXT:carousel_gallery/Resources/Public/StyleSheets/CarouselGallery.css
 				type = css
@@ -24,6 +31,13 @@ plugin.tx_carouselgallery {
 				dependencies = mainCss
 			}
 
+			SwiperJs {
+				path = EXT:carousel_gallery/Resources/Public/JavaScript/swiper.min.js
+				type = js
+
+				# Optional key if loading assets through EXT:vhs.
+				dependencies = mainJs
+			}
 			CarouselGalleryJs {
 				path = EXT:carousel_gallery/Resources/Public/JavaScript/CarouselGallery.js
 				type = js
