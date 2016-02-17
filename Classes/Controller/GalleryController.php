@@ -1,5 +1,5 @@
 <?php
-namespace Fab\CarouselGallery\Controller;
+namespace Fab\AgileCarousel\Controller;
 
 /**
  * This file is part of the TYPO3 CMS project.
@@ -14,8 +14,8 @@ namespace Fab\CarouselGallery\Controller;
  * The TYPO3 project - inspiring people to share!
  */
 
-use Fab\CarouselGallery\Persistence\MatcherFactory;
-use Fab\CarouselGallery\Persistence\OrderFactory;
+use Fab\AgileCarousel\Persistence\MatcherFactory;
+use Fab\AgileCarousel\Persistence\OrderFactory;
 use Fab\Vidi\Domain\Repository\ContentRepositoryFactory;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 

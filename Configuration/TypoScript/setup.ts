@@ -1,15 +1,15 @@
 #################################
-# plugin.tx_carouselgallery
+# plugin.tx_agilecarousel
 #################################
 
-plugin.tx_carouselgallery {
+plugin.tx_agilecarousel {
 	view {
-		templateRootPath = {$plugin.tx_carouselgallery.view.templateRootPath}
-		partialRootPath = {$plugin.tx_carouselgallery.view.partialRootPath}
-		layoutRootPath = {$plugin.tx_carouselgallery.view.layoutRootPath}
+		templateRootPath = {$plugin.tx_agilecarousel.view.templateRootPath}
+		partialRootPath = {$plugin.tx_agilecarousel.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_agilecarousel.view.layoutRootPath}
 	}
 	persistence {
-		storagePid = {$plugin.tx_carouselgallery.persistence.storagePid}
+		storagePid = {$plugin.tx_agilecarousel.persistence.storagePid}
 	}
 
 	settings {
@@ -17,14 +17,14 @@ plugin.tx_carouselgallery {
 		asset {
 
 			SwiperCss {
-				path = EXT:carousel_gallery/Resources/Public/StyleSheets/swiper.min.css
+				path = EXT:agile_carousel/Resources/Public/StyleSheets/swiper.min.css
 				type = css
 
 				# Optional key if loading assets through EXT:vhs.
 				dependencies = mainCss
 			}
-			CarouselGalleryCss {
-				path = EXT:carousel_gallery/Resources/Public/StyleSheets/CarouselGallery.css
+			AgileCarouselCss {
+				path = EXT:agile_carousel/Resources/Public/StyleSheets/AgileCarousel.css
 				type = css
 
 				# Optional key if loading assets through EXT:vhs.
@@ -32,14 +32,14 @@ plugin.tx_carouselgallery {
 			}
 
 			SwiperJs {
-				path = EXT:carousel_gallery/Resources/Public/JavaScript/swiper.min.js
+				path = EXT:agile_carousel/Resources/Public/JavaScript/swiper.min.js
 				type = js
 
 				# Optional key if loading assets through EXT:vhs.
 				dependencies = mainJs
 			}
-			CarouselGalleryJs {
-				path = EXT:carousel_gallery/Resources/Public/JavaScript/CarouselGallery.js
+			AgileCarouselJs {
+				path = EXT:agile_carousel/Resources/Public/JavaScript/AgileCarousel.js
 				type = js
 
 				# Optional key if loading assets through EXT:vhs.

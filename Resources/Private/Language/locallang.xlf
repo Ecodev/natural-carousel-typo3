@@ -7,10 +7,10 @@
 
 			<!-- Wizard -->
 			<trans-unit id="wizard.title">
-				<source>Carousel Gallery</source>
+				<source>Agile Carousel</source>
 			</trans-unit>
 			<trans-unit id="wizard.description">
-				<source>Display images in a carousel gallery.</source>
+				<source>Display images in a carousel.</source>
 			</trans-unit>
 
 			<!-- Settings -->
@@ -86,7 +86,7 @@
 			</trans-unit>
 
 			<!-- Frontend -->
-			<trans-unit id="tx_carouselgallery_dropdown_tags">
+			<trans-unit id="tx_agilecarousel_dropdown_tags">
 				<source>all</source>
 			</trans-unit>
 			<trans-unit id="filter_by">

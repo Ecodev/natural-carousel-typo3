@@ -1,6 +1,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"
       xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
-      xmlns:gallery="http://typo3.org/ns/Fab/CarouselGallery/ViewHelpers">
+      xmlns:gallery="http://typo3.org/ns/Fab/AgileCarousel/ViewHelpers">
 
 <f:layout name="Default"/>
 <f:section name="main">
@@ -9,30 +9,30 @@
 		<script type="text/javascript">
 			window.carouselGalleries = window.carouselGalleries || [];
 
-			var carouselGallery = {};
-			carouselGallery.id = Number('{data.uid}');
-			carouselGallery.images = {gallery:imageStack()};
+			var agileCarousel = {};
+			agileCarousel.id = Number('{data.uid}');
+			agileCarousel.images = {gallery:imageStack()};
 
 			// Settings
-			carouselGallery.autoReplay = Boolean('{settings.autoReplay}');
-			carouselGallery.waitTime = Number('{settings.waitTime}');
-			carouselGallery.loop = Boolean('{settings.loop}');
-			carouselGallery.transitionTime = Number('{settings.transitionTime}');
-			carouselGallery.freeMode = Boolean('{settings.freeMode}');
-			carouselGallery.slidesPerView = Number('{settings.slidesPerView}');
-			carouselGallery.margin = Number('{settings.margin}');
+			agileCarousel.autoReplay = Boolean('{settings.autoReplay}');
+			agileCarousel.waitTime = Number('{settings.waitTime}');
+			agileCarousel.loop = Boolean('{settings.loop}');
+			agileCarousel.transitionTime = Number('{settings.transitionTime}');
+			agileCarousel.freeMode = Boolean('{settings.freeMode}');
+			agileCarousel.slidesPerView = Number('{settings.slidesPerView}');
+			agileCarousel.margin = Number('{settings.margin}');
 
 			// @todo : to implement
-			carouselGallery.slideHeight = Number('{settings.slideHeight}');
-			carouselGallery.format = '{settings.format}';
-			carouselGallery.autoPlay = Boolean('{settings.autoPlay}');
-			carouselGallery.showThumbnails = Boolean('{settings.showThumbnails}');
-			carouselGallery.thumbnailHeight = Number('{settings.thumbnailHeight}');
+			agileCarousel.slideHeight = Number('{settings.slideHeight}');
+			agileCarousel.format = '{settings.format}';
+			agileCarousel.autoPlay = Boolean('{settings.autoPlay}');
+			agileCarousel.showThumbnails = Boolean('{settings.showThumbnails}');
+			agileCarousel.thumbnailHeight = Number('{settings.thumbnailHeight}');
 
-			window.carouselGalleries.push(carouselGallery);
+			window.carouselGalleries.push(agileCarousel);
 		</script>
 
-		<div class="swiper-container" id="tx-carouselgallery-{data.uid}" data-galleryid="{data.uid}">
+		<div class="swiper-container" id="tx-agilecarousel-{data.uid}" data-galleryid="{data.uid}">
 			<!-- Additional required wrapper -->
 			<div class="swiper-wrapper"></div>
 			<div class="swiper-pagination" id="swiper-pagination-{data.uid}"></div>
