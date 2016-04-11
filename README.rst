@@ -1,5 +1,5 @@
 ==============
-Agile Carousel
+Natural Carousel Typo3
 ==============
 
 Display images as you scroll. Images are displayed within a slideshow when enlarged.
