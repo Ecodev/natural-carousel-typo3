@@ -1,0 +1,47 @@
+
+.swiper-pagination-bullet {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.swiper-pagination-bullets:not(:hover) .swiper-pagination-bullet .swiper-pagination-bullet-bg {
+    background: #ccc !important;
+}
+.swiper-pagination-bullets:not(:hover) .swiper-pagination-bullet-active .swiper-pagination-bullet-bg {
+    background: #0089e0 !important;
+}
+
+.swiper-pagination-bullet-label {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+.swiper-pagination-bullet-label,
+.swiper-button-prev,
+.swiper-button-next {
+    color: #0089e0;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.swiper-button-prev svg,
+.swiper-button-next svg {
+    fill: currentColor;
+}
+
+.natural-carousel .swiper-pagination-bullets:hover .swiper-pagination-bullet {
+    background-color: white;
+}
+
+.natural-carousel-text-container {
+    color:#444444;
+}
+
+.natural-carousel-text-container .natural-carousel-text-button {
+    display:inline-block;
+    margin-top:10px;
+    padding:7px 20px;
+    background:#0089e0;
+    color:white;
+    box-shadow:0 1px 1px rgba(0,0,0,0.3);
+    border-radius:3px;
+    text-decoration:none;
+}

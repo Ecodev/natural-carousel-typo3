@@ -2,7 +2,8 @@
   "name": "agile_carousel",
   "version": "1.0.0",
   "ignore": [],
-  "dependencies": {
-    "Swiper": "swiper#~3.2.7"
+  "devDependencies": {
+    "Swiper": "swiper#^3.3.1",
+    "natural-carousel": "master"
   }
 }

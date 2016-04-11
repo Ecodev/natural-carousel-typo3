@@ -23,8 +23,25 @@ plugin.tx_agilecarousel {
 				# Optional key if loading assets through EXT:vhs.
 				dependencies = mainCss
 			}
-			AgileCarouselCss {
-				path = EXT:agile_carousel/Resources/Public/StyleSheets/AgileCarousel.css
+
+			NaturalCarouselCSS {
+				path = EXT:agile_carousel/Resources/Public/StyleSheets/natural-carousel.min.css
+				type = css
+
+				# Optional key if loading assets through EXT:vhs.
+				dependencies = mainCss
+			}
+
+			NaturalCarouselThemeCSS {
+				path = EXT:agile_carousel/Resources/Public/StyleSheets/natural.min.css
+				type = css
+
+				# Optional key if loading assets through EXT:vhs.
+				dependencies = mainCss
+			}
+
+			masterCss {
+				path = EXT:agile_carousel/Resources/Public/StyleSheets/master.css
 				type = css
 
 				# Optional key if loading assets through EXT:vhs.
@@ -32,14 +49,23 @@ plugin.tx_agilecarousel {
 			}
 
 			SwiperJs {
-				path = EXT:agile_carousel/Resources/Public/JavaScript/swiper.min.js
+				path = EXT:agile_carousel/Resources/Public/JavaScript/swiper.jquery.min.js
 				type = js
 
 				# Optional key if loading assets through EXT:vhs.
 				dependencies = mainJs
 			}
-			AgileCarouselJs {
-				path = EXT:agile_carousel/Resources/Public/JavaScript/AgileCarousel.js
+
+			NaturalCarouselJS {
+				path = EXT:agile_carousel/Resources/Public/JavaScript/natural-carousel.min.js
+				# path = EXT:agile_carousel/Resources/Public/Dev/natural-carousel-js/src/js/natural-carousel.js
+				type = js
+
+				# Optional key if loading assets through EXT:vhs.
+				dependencies = mainJs
+			}
+			masterJs {
+				path = EXT:agile_carousel/Resources/Public/JavaScript/master.js
 				type = js
 
 				# Optional key if loading assets through EXT:vhs.

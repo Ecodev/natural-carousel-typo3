@@ -14,33 +14,25 @@ namespace Fab\AgileCarousel\ViewHelpers;
  * The TYPO3 project - inspiring people to share!
  */
 
+use FluidTYPO3\Vhs\Asset;
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Utility\PathUtility;
 use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
+use Fab\AgileCarousel\Utility\PartialLoadingRegister;
 
 /**
- * View helper for inline style.
+ * View helper to load a JavaScript file
  */
-class DynamicStyleViewHelper extends AbstractViewHelper
+class AbstractIsPartialAlreadyLoadedViewHelper extends AbstractViewHelper
 {
 
     /**
-     * Generate a JSON array of images suiting xoyview
-     *
-     * @param array $settings containing images
-     * @return string
+     * @return bool
      */
-    public function render(array $settings)
+    public function render()
     {
-
-        # Defines width and height values dynamically
-        $styles = <<<EOF
-<style>
-.tx-infinitscrollgallery-thumbnail {
-	width: {$settings['thumbnailMaximumWidth']}px;
-	height: {$settings['thumbnailMaximumHeight']}px;
-}
-</style>
-EOF;
-
-        return $styles;
+        return  !PartialLoadingRegister::getInstance()->usePartial($this->name);
     }
+
 }

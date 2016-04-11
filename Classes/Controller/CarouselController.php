@@ -14,18 +14,15 @@ namespace Fab\AgileCarousel\Controller;
  * The TYPO3 project - inspiring people to share!
  */
 
-use Fab\AgileCarousel\Persistence\MatcherFactory;
-use Fab\AgileCarousel\Persistence\OrderFactory;
 use Fab\Vidi\Domain\Repository\ContentRepositoryFactory;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 /**
  * Controller
  */
-class GalleryController extends ActionController
+class CarouselController extends ActionController
 {
 
-    /**
     /**
      * @var array
      */
@@ -42,20 +39,15 @@ class GalleryController extends ActionController
     public function listAction()
     {
 
-        // Initialize some objects related to the query.
-        $matcher = MatcherFactory::getInstance($this->settings)->getMatcher();
-        $order = OrderFactory::getInstance($this->settings)->getOrder();
-
-        // Fetch the adequate repository for a known data type.
-        $contentRepository = ContentRepositoryFactory::getInstance('sys_file');
-
-        // Fetch and count files
-        $images = $contentRepository->findBy($matcher, $order);
+        $slides = [
+            [],
+            [],
+        ];
 
         // Assign template variables
         $this->view->assign('settings', $this->settings);
         $this->view->assign('data', $this->configurationManager->getcontentObject()->data);
-        $this->view->assign('images', $images);
+        $this->view->assign('slides', $slides);
 
     }
 

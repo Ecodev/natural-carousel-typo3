@@ -7,10 +7,8 @@ if (!defined('TYPO3_MODE')) {
     'Fab.agile_carousel',
     'Pi1',
     array(
-        'Gallery' => 'list',
+        'Carousel' => 'list',
     ),
     // non-cachable actions
-    array(
-        #'Gallery' => 'list',
-    )
+    array()
 );
