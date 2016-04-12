@@ -1,5 +1,5 @@
 <?php
-namespace Fab\AgileCarousel\ViewHelpers;
+namespace Fab\NaturalCarousel\ViewHelpers;
 
 /**
  * This file is part of the TYPO3 CMS project.
@@ -19,7 +19,7 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\PathUtility;
 use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
-use Fab\AgileCarousel\Utility\PartialLoadingRegister;
+use Fab\NaturalCarousel\Utility\PartialLoadingRegister;
 
 /**
  * View helper to load a JavaScript file

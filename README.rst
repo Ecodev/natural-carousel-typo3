@@ -5,42 +5,42 @@ Natural Carousel Typo3
 Display images as you scroll. Images are displayed within a slideshow when enlarged.
 Under the hood it uses the Media API and relies on categories to filter images on the FE.
 
-.. image:: https://raw.github.com/Ecodev/agile_carousel/master/Documentation/Introduction-01.png
+.. image:: https://raw.github.com/Ecodev/natural_carousel/master/Documentation/Introduction-01.png
 
 
 Project info and releases
 =========================
 
-The home page of the project is on https://github.com/Ecodev/agile_carousel.git
+The home page of the project is on https://github.com/Ecodev/natural_carousel.git
 
 Stable version:
-http://typo3.org/extensions/repository/view/agile_carousel
+http://typo3.org/extensions/repository/view/natural_carousel
 
 Development version:
-https://github.com/Ecodev/agile_carousel.git
+https://github.com/Ecodev/natural_carousel.git
 
 ::
 
-	git clone https://github.com/Ecodev/agile_carousel.git
+	git clone https://github.com/Ecodev/natural-carousel-typo3.git natural_carousel
 
 Users manual
 ============
 
 To install a gallery on a page, click on the page where the gallery should be displayed and create a new content element.
 
-.. image:: https://raw.github.com/Ecodev/agile_carousel/master/Documentation/UserManual-01.png
+.. image:: https://raw.github.com/Ecodev/natural_carousel/master/Documentation/UserManual-01.png
 
 Choose the plugin "Infinite Scroll Gallery"
 
-.. image:: https://raw.github.com/Ecodev/agile_carousel/master/Documentation/UserManual-02.png
+.. image:: https://raw.github.com/Ecodev/natural_carousel/master/Documentation/UserManual-02.png
 
 Give a Header if necessary and choose the "Plugin" tab.
 
-.. image:: https://raw.github.com/Ecodev/agile_carousel/master/Documentation/UserManual-03.png
+.. image:: https://raw.github.com/Ecodev/natural_carousel/master/Documentation/UserManual-03.png
 
 Choose "Infinite Scroll Gallery" plugin
 
-.. image:: https://raw.github.com/Ecodev/agile_carousel/master/Documentation/UserManual-04.png
+.. image:: https://raw.github.com/Ecodev/natural_carousel/master/Documentation/UserManual-04.png
 
 Once the plugin "Infinite Scroll Gallery" is selected, configuration is self explanatory.
 
@@ -60,7 +60,7 @@ Description
 	Path to template root
 
 Default
-	EXT:agile_carousel/Resources/Private/Templates/
+	EXT:natural_carousel/Resources/Private/Templates/
 
 .. .....................................................................................
 .. container:: table-row
@@ -75,7 +75,7 @@ Description
 	Path to template partials
 
 Default
-	EXT:agile_carousel/Resources/Private/Partials/
+	EXT:natural_carousel/Resources/Private/Partials/
 
 
 .. .....................................................................................
@@ -91,7 +91,7 @@ Description
 	Path to template layouts
 
 Default
-	EXT:agile_carousel/Resources/Private/Layouts/
+	EXT:natural_carousel/Resources/Private/Layouts/
 
 .. .....................................................................................
 .. container:: table-row
@@ -106,4 +106,4 @@ Description
 	Path to template layouts
 
 Default
-	EXT:agile_carousel/Resources/Private/Layouts/
+	EXT:natural_carousel/Resources/Private/Layouts/

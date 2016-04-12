@@ -1,8 +1,8 @@
 {
-	"name": "fab/agile-carousel",
+	"name": "fab/natural-carousel",
 	"type": "typo3-cms-extension",
-	"description": "Agile Carousel gallery.",
-	"homepage": "https://github.com/Ecodev/agile_carousel",
+	"description": "Natural Carousel gallery.",
+	"homepage": "https://github.com/Ecodev/natural-carousel-typo3",
 	"license": [
 		"GPL-2.0+"
 	],
@@ -11,12 +11,15 @@
 		"Photo Gallery"
 	],
 	"support": {
-		"issues": "https://github.com/Ecodev/agile_carousel/issues"
+		"issues": "https://github.com/Ecodev/natural-carousel-typo3/issues"
 	},
 	"autoload": {
 		"psr-4": {
-			"Fab\\AgileCarousel\\": "Classes"
+			"Fab\\NaturalCarousel\\": "Classes"
 		}
 	},
-	"version": "1.0.0-dev"
+	"replace": {
+		"natural_carousel": "self.version",
+		"typo3-ter/natural_carousel": "self.version"
+	}
 }

@@ -1,5 +1,5 @@
 <?php
-namespace Fab\AgileCarousel\Persistence;
+namespace Fab\NaturalCarousel\Persistence;
 
 /**
  * This file is part of the TYPO3 CMS project.

@@ -1,5 +1,5 @@
 <?php
-namespace Fab\AgileCarousel\ViewHelpers;
+namespace Fab\NaturalCarousel\ViewHelpers;
 
 /**
  * This file is part of the TYPO3 CMS project.

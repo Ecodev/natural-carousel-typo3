@@ -4,7 +4,7 @@ if (!defined('TYPO3_MODE')) {
 }
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-    'Fab.agile_carousel',
+    'Fab.natural_carousel',
     'Pi1',
     array(
         'Carousel' => 'list',

@@ -7,7 +7,7 @@
 
 			<!-- Wizard -->
 			<trans-unit id="wizard.title">
-				<source>Agile Carousel</source>
+				<source>Natural Carousel</source>
 			</trans-unit>
 			<trans-unit id="wizard.description">
 				<source>Display images in a carousel.</source>
@@ -86,27 +86,6 @@
 			</trans-unit>
 
 			<!-- Frontend -->
-			<trans-unit id="tx_agilecarousel_dropdown_tags">
-				<source>all</source>
-			</trans-unit>
-			<trans-unit id="filter_by">
-				<source>Filter by</source>
-			</trans-unit>
-			<trans-unit id="without">
-				<source>Without</source>
-			</trans-unit>
-			<trans-unit id="select_category">
-				<source>Select a category</source>
-			</trans-unit>
-			<trans-unit id="search">
-				<source>Search...</source>
-			</trans-unit>
-			<trans-unit id="more">
-				<source>More</source>
-			</trans-unit>
-			<trans-unit id="none">
-				<source>No results</source>
-			</trans-unit>
 		</body>
 	</file>
 </xliff>

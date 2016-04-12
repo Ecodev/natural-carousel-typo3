@@ -1,14 +1,14 @@
-plugin.tx_agilecarousel {
+plugin.tx_naturalcarousel {
 	view {
-		# cat=plugin.tx_agilecarousel/file; type=string; label=Path to template root (FE)
-		templateRootPath = EXT:agile_carousel/Resources/Private/Templates/
-		# cat=plugin.tx_agilecarousel/file; type=string; label=Path to template partials (FE)
-		partialRootPath = EXT:agile_carousel/Resources/Private/Partials/
-		# cat=plugin.tx_agilecarousel/file; type=string; label=Path to template layouts (FE)
-		layoutRootPath = EXT:agile_carousel/Resources/Private/Layouts/
+		# cat=plugin.tx_naturalcarousel/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:natural_carousel/Resources/Private/Templates/
+		# cat=plugin.tx_naturalcarousel/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:natural_carousel/Resources/Private/Partials/
+		# cat=plugin.tx_naturalcarousel/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:natural_carousel/Resources/Private/Layouts/
 	}
 	persistence {
-		# cat=plugin.tx_agilecarousel//a; type=int+; label=Default storage PID
+		# cat=plugin.tx_naturalcarousel//a; type=int+; label=Default storage PID
 		storagePid =
 	}
 }

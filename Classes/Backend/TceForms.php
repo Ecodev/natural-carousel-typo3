@@ -1,5 +1,5 @@
 <?php
-namespace Fab\AgileCarousel\Backend;
+namespace Fab\NaturalCarousel\Backend;
 
 /**
  * This file is part of the TYPO3 CMS project.
@@ -84,11 +84,11 @@ class TceForms
         $setup = $this->getConfigurationManager()->getTypoScriptSetup();
 
         $pluginConfiguration = array();
-        if (is_array($setup['plugin.']['tx_agilecarousel.'])) {
+        if (is_array($setup['plugin.']['tx_naturalcarousel.'])) {
 
             /** @var TypoScriptService $typoScriptService */
             $typoScriptService = GeneralUtility::makeInstance(TypoScriptService::class);
-            $pluginConfiguration = $typoScriptService->convertTypoScriptArrayToPlainArray($setup['plugin.']['tx_agilecarousel.']);
+            $pluginConfiguration = $typoScriptService->convertTypoScriptArrayToPlainArray($setup['plugin.']['tx_naturalcarousel.']);
         }
         return $pluginConfiguration;
     }

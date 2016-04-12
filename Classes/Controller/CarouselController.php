@@ -1,5 +1,5 @@
 <?php
-namespace Fab\AgileCarousel\Controller;
+namespace Fab\NaturalCarousel\Controller;
 
 /**
  * This file is part of the TYPO3 CMS project.

@@ -1,5 +1,5 @@
 <?php
-#namespace Fab\AgileCarousel\Backend;
+#namespace Fab\NaturalCarousel\Backend;
 
 /**
  * This file is part of the TYPO3 CMS project.
@@ -19,7 +19,7 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 /**
  * Class that adds the wizard icon.
  */
-class tx_agilecarousel_wizard
+class tx_naturalcarousel_wizard
 {
 
     /**
@@ -30,11 +30,11 @@ class tx_agilecarousel_wizard
      */
     function proc($wizardItems)
     {
-        $wizardItems['plugins_tx_agilecarousel_pi1'] = array(
-            'icon' => ExtensionManagementUtility::extRelPath('agile_carousel') . 'Resources/Public/Images/AgileCarousel.png',
-            'title' => $this->getLanguageService()->sL('LLL:EXT:agile_carousel/Resources/Private/Language/locallang.xlf:wizard.title'),
-            'description' => $this->getLanguageService()->sL('LLL:EXT:agile_carousel/Resources/Private/Language/locallang.xlf:wizard.description'),
-            'params' => '&defVals[tt_content][CType]=list&defVals[tt_content][list_type]=agilecarousel_pi1'
+        $wizardItems['plugins_tx_naturalcarousel_pi1'] = array(
+            'icon' => ExtensionManagementUtility::extRelPath('natural_carousel') . 'Resources/Public/Images/NaturalCarousel.png',
+            'title' => $this->getLanguageService()->sL('LLL:EXT:natural_carousel/Resources/Private/Language/locallang.xlf:wizard.title'),
+            'description' => $this->getLanguageService()->sL('LLL:EXT:natural_carousel/Resources/Private/Language/locallang.xlf:wizard.description'),
+            'params' => '&defVals[tt_content][CType]=list&defVals[tt_content][list_type]=naturalcarousel_pi1'
         );
 
         return $wizardItems;
