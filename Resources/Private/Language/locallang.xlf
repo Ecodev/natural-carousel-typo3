@@ -76,6 +76,9 @@
 			<trans-unit id="settings.direction">
 				<source>Default direction</source>
 			</trans-unit>
+			<trans-unit id="settings.images.new">
+				<source>Add new image</source>
+			</trans-unit>
 
 			<!-- Tabs -->
 			<trans-unit id="flexform.tab.source">

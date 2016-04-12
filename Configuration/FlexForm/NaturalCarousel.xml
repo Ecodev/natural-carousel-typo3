@@ -13,11 +13,11 @@
 				<el>
 					<settings.images>
 						<TCEforms>
-							<label>asdf</label>
+							<label>LLL:EXT:lang/locallang_general.xlf:LGL.images</label>
 							<config>
 								<type>inline</type>
 								<appearance type="array">
-									<createNewRelationLinkTitle>qwre</createNewRelationLinkTitle>
+									<createNewRelationLinkTitle>LLL:EXT:natural_carousel/Resources/Private/Language/locallang.xlf:settings.images.new</createNewRelationLinkTitle>
 									<enabledControls type="array">
 										<delete>1</delete>
 										<dragdrop>1</dragdrop>
@@ -32,6 +32,11 @@
 									</headerThumbnail>
 									<useSortable>1</useSortable>
 								</appearance>
+								<foreign_types type="array">
+									<numIndex index="2" type="array">
+										<showitem>--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,--palette--;;filePalette</showitem>
+									</numIndex>
+								</foreign_types>
 								<behaviour type="array">
 									<localizationMode>select</localizationMode>
 									<localizeChildrenAtParentLocalization>1</localizeChildrenAtParentLocalization>
