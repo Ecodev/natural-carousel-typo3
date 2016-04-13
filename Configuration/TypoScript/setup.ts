@@ -59,8 +59,8 @@ plugin.tx_naturalcarousel {
 			}
 
 			NaturalCarouselJS {
-				#path = EXT:natural_carousel/Resources/Public/JavaScript/natural-carousel.min.js
-				path = EXT:natural_carousel/Resources/Public/Dev/natural-carousel-js/src/js/natural-carousel.js
+				path = EXT:natural_carousel/Resources/Public/JavaScript/natural-carousel.min.js
+				#path = EXT:natural_carousel/Resources/Public/Dev/natural-carousel-js/src/js/natural-carousel.js
 				type = js
 
 				# Optional key if loading assets through EXT:vhs.
