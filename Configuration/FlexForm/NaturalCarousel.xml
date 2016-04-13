@@ -1,265 +1,268 @@
 <T3DataStructure>
-	<meta>
-		<langDisable>1</langDisable>
-	</meta>
-	<sheets>
-		<selection>
-			<ROOT>
-				<TCEforms>
-					<sheetTitle>LLL:EXT:natural_carousel/Resources/Private/Language/locallang.xlf:flexform.tab.source
-					</sheetTitle>
-				</TCEforms>
-				<type>array</type>
-				<el>
-					<settings.images>
-						<TCEforms>
-							<label>LLL:EXT:lang/locallang_general.xlf:LGL.images</label>
-							<config>
-								<type>inline</type>
-								<appearance type="array">
-									<createNewRelationLinkTitle>LLL:EXT:natural_carousel/Resources/Private/Language/locallang.xlf:settings.images.new</createNewRelationLinkTitle>
-									<enabledControls type="array">
-										<delete>1</delete>
-										<dragdrop>1</dragdrop>
-										<hide>1</hide>
-										<info>1</info>
-										<localize>1</localize>
-									</enabledControls>
-									<headerThumbnail type="array">
-										<field>uid_local</field>
-										<height>45c</height>
-										<width>45</width>
-									</headerThumbnail>
-									<useSortable>1</useSortable>
-								</appearance>
-								<foreign_types type="array">
-									<numIndex index="2" type="array">
-										<showitem>--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,--palette--;;filePalette</showitem>
-									</numIndex>
-								</foreign_types>
-								<behaviour type="array">
-									<localizationMode>select</localizationMode>
-									<localizeChildrenAtParentLocalization>1</localizeChildrenAtParentLocalization>
-								</behaviour>
-								<filter type="array">
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <selection>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:natural_carousel/Resources/Private/Language/locallang.xlf:flexform.tab.source
+                    </sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.images>
+                        <TCEforms>
+                            <label>LLL:EXT:lang/locallang_general.xlf:LGL.images</label>
+                            <config>
+                                <type>inline</type>
+                                <appearance type="array">
+                                    <createNewRelationLinkTitle>LLL:EXT:natural_carousel/Resources/Private/Language/locallang.xlf:settings.images.new
+                                    </createNewRelationLinkTitle>
+                                    <enabledControls type="array">
+                                        <delete>1</delete>
+                                        <dragdrop>1</dragdrop>
+                                        <hide>1</hide>
+                                        <info>1</info>
+                                        <localize>1</localize>
+                                    </enabledControls>
+                                    <headerThumbnail type="array">
+                                        <field>uid_local</field>
+                                        <height>45c</height>
+                                        <width>45</width>
+                                    </headerThumbnail>
+                                    <useSortable>1</useSortable>
+                                </appearance>
+                                <foreign_types type="array">
+                                    <numIndex index="2" type="array">
+                                        <showitem>
+                                            --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,--palette--;;filePalette
+                                        </showitem>
+                                    </numIndex>
+                                </foreign_types>
+                                <behaviour type="array">
+                                    <localizationMode>select</localizationMode>
+                                    <localizeChildrenAtParentLocalization>1</localizeChildrenAtParentLocalization>
+                                </behaviour>
+                                <filter type="array">
 
-								</filter>
-								<foreign_field>uid_foreign</foreign_field>
-								<foreign_label>uid_local</foreign_label>
-								<foreign_match_fields type="array">
-									<fieldname>images</fieldname>
-								</foreign_match_fields>
-								<foreign_selector>uid_local</foreign_selector>
-								<foreign_selector_fieldTcaOverride type="array">
-									<config type="array">
-										<appearance type="array">
-											<elementBrowserAllowed>gif,jpg,jpeg,tif,tiff,bmp,pcx,tga,png,pdf,ai
-											</elementBrowserAllowed>
-											<elementBrowserType>file</elementBrowserType>
-										</appearance>
-									</config>
-								</foreign_selector_fieldTcaOverride>
-								<foreign_sortby>sorting_foreign</foreign_sortby>
-								<foreign_table>sys_file_reference</foreign_table>
-								<foreign_table_field>tablenames</foreign_table_field>
-								<maxitems>100</maxitems>
-								<minitems>0</minitems>
-							</config>
-						</TCEforms>
-					</settings.images>
+                                </filter>
+                                <foreign_field>uid_foreign</foreign_field>
+                                <foreign_label>uid_local</foreign_label>
+                                <foreign_match_fields type="array">
+                                    <fieldname>images</fieldname>
+                                </foreign_match_fields>
+                                <foreign_selector>uid_local</foreign_selector>
+                                <foreign_selector_fieldTcaOverride type="array">
+                                    <config type="array">
+                                        <appearance type="array">
+                                            <elementBrowserAllowed>gif,jpg,jpeg,png,svg
+                                            </elementBrowserAllowed>
+                                            <elementBrowserType>file</elementBrowserType>
+                                        </appearance>
+                                    </config>
+                                </foreign_selector_fieldTcaOverride>
+                                <foreign_sortby>sorting_foreign</foreign_sortby>
+                                <foreign_table>sys_file_reference</foreign_table>
+                                <foreign_table_field>tablenames</foreign_table_field>
+                                <maxitems>100</maxitems>
+                                <minitems>0</minitems>
+                            </config>
+                        </TCEforms>
+                    </settings.images>
 
 
-				</el>
-			</ROOT>
-		</selection>
+                </el>
+            </ROOT>
+        </selection>
 
-		<sorting>
-			<ROOT>
-				<TCEforms>
-					<sheetTitle>LLL:EXT:natural_carousel/Resources/Private/Language/locallang.xlf:flexform.tab.sorting
-					</sheetTitle>
-				</TCEforms>
-				<type>array</type>
-				<el>
-				</el>
-			</ROOT>
-		</sorting>
+        <sorting>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:natural_carousel/Resources/Private/Language/locallang.xlf:flexform.tab.sorting
+                    </sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                </el>
+            </ROOT>
+        </sorting>
 
-		<slideSettings>
-			<ROOT>
-				<TCEforms>
-					<sheetTitle>Slide settings</sheetTitle>
-				</TCEforms>
-				<type>array</type>
-				<el>
-					<settings.autoPlay>
-						<TCEforms>
-							<label>
-								Auto Play
-							</label>
-							<config>
-								<type>check</type>
-								<default>1</default>
-							</config>
-						</TCEforms>
-					</settings.autoPlay>
-					<settings.waitTime>
-						<TCEforms>
-							<label>
-								Wait time
-							</label>
-							<config>
-								<type>input</type>
-								<default>3000</default>
-								<eval>trim</eval>
-							</config>
-						</TCEforms>
-					</settings.waitTime>
-					<settings.transitionTime>
-						<TCEforms>
-							<label>
-								Transition time
-							</label>
-							<config>
-								<type>input</type>
-								<default>1000</default>
-								<eval>trim</eval>
-							</config>
-						</TCEforms>
-					</settings.transitionTime>
-					<settings.autoReplay>
-						<TCEforms>
-							<label>
-								Play again after interaction
-							</label>
-							<config>
-								<type>check</type>
-								<default>1</default>
-							</config>
-						</TCEforms>
-					</settings.autoReplay>
-					<settings.loop>
-						<TCEforms>
-							<label>
-								Loop
-							</label>
-							<config>
-								<type>check</type>
-								<default>1</default>
-							</config>
-						</TCEforms>
-					</settings.loop>
-					<settings.freeMode>
-						<TCEforms>
-							<label>
-								Free mode
-							</label>
-							<config>
-								<type>check</type>
-								<default>1</default>
-							</config>
-						</TCEforms>
-					</settings.freeMode>
-					<settings.showThumbnails>
-						<TCEforms>
-							<label>
-								Show thumbnails
-							</label>
-							<config>
-								<type>check</type>
-								<default>0</default>
-							</config>
-						</TCEforms>
-					</settings.showThumbnails>
-				</el>
-			</ROOT>
-		</slideSettings>
+        <slideSettings>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Slide settings</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.autoPlay>
+                        <TCEforms>
+                            <label>
+                                Auto Play
+                            </label>
+                            <config>
+                                <type>check</type>
+                                <default>1</default>
+                            </config>
+                        </TCEforms>
+                    </settings.autoPlay>
+                    <settings.waitTime>
+                        <TCEforms>
+                            <label>
+                                Wait time
+                            </label>
+                            <config>
+                                <type>input</type>
+                                <default>3000</default>
+                                <eval>trim</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.waitTime>
+                    <settings.transitionTime>
+                        <TCEforms>
+                            <label>
+                                Transition time
+                            </label>
+                            <config>
+                                <type>input</type>
+                                <default>1000</default>
+                                <eval>trim</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.transitionTime>
+                    <settings.autoReplay>
+                        <TCEforms>
+                            <label>
+                                Play again after interaction
+                            </label>
+                            <config>
+                                <type>check</type>
+                                <default>1</default>
+                            </config>
+                        </TCEforms>
+                    </settings.autoReplay>
+                    <settings.loop>
+                        <TCEforms>
+                            <label>
+                                Loop
+                            </label>
+                            <config>
+                                <type>check</type>
+                                <default>1</default>
+                            </config>
+                        </TCEforms>
+                    </settings.loop>
+                    <settings.freeMode>
+                        <TCEforms>
+                            <label>
+                                Free mode
+                            </label>
+                            <config>
+                                <type>check</type>
+                                <default>1</default>
+                            </config>
+                        </TCEforms>
+                    </settings.freeMode>
+                    <settings.showThumbnails>
+                        <TCEforms>
+                            <label>
+                                Show thumbnails
+                            </label>
+                            <config>
+                                <type>check</type>
+                                <default>0</default>
+                            </config>
+                        </TCEforms>
+                    </settings.showThumbnails>
+                </el>
+            </ROOT>
+        </slideSettings>
 
-		<imageSettings>
-			<ROOT>
-				<TCEforms>
-					<sheetTitle>
-						LLL:EXT:natural_carousel/Resources/Private/Language/locallang.xlf:flexform.tab.imageSettings
-					</sheetTitle>
-				</TCEforms>
-				<type>array</type>
-				<el>
-					<settings.format>
-						<TCEforms>
-							<label>
-								LLL:EXT:natural_carousel/Resources/Private/Language/locallang.xlf:settings.thumbnailFormat
-							</label>
-							<config>
-								<type>select</type>
-								<items type="array">
-									<numIndex index="1" type="array">
-										<numIndex index="0">
-											LLL:EXT:natural_carousel/Resources/Private/Language/locallang.xlf:settings.thumbnailFormat.natural
-										</numIndex>
-										<numIndex index="1">natural</numIndex>
-									</numIndex>
-									<numIndex index="2" type="array">
-										<numIndex index="0">
-											LLL:EXT:natural_carousel/Resources/Private/Language/locallang.xlf:settings.thumbnailFormat.square
-										</numIndex>
-										<numIndex index="1">square</numIndex>
-									</numIndex>
-								</items>
-								<minitems>0</minitems>
-								<maxitems>1</maxitems>
-							</config>
-						</TCEforms>
-					</settings.format>
-					<settings.slidesPerView>
-						<TCEforms>
-							<label>
-								Slides per view
-							</label>
-							<config>
-								<type>input</type>
-								<default>1</default>
-								<eval>trim</eval>
-							</config>
-						</TCEforms>
-					</settings.slidesPerView>
-					<settings.margin>
-						<TCEforms>
-							<label>
-								LLL:EXT:natural_carousel/Resources/Private/Language/locallang.xlf:settings.margin
-							</label>
-							<config>
-								<type>input</type>
-								<default>10</default>
-								<eval>trim</eval>
-							</config>
-						</TCEforms>
-					</settings.margin>
-					<settings.slideHeight>
-						<TCEforms>
-							<label>
-								Slide height
-							</label>
-							<config>
-								<type>input</type>
-								<default>400</default>
-								<eval>trim</eval>
-							</config>
-						</TCEforms>
-					</settings.slideHeight>
-					<settings.thumbnailHeight>
-						<TCEforms>
-							<label>
-								Thumbnails height
-							</label>
-							<config>
-								<type>input</type>
-								<default>100</default>
-								<eval>trim</eval>
-							</config>
-						</TCEforms>
-					</settings.thumbnailHeight>
-				</el>
-			</ROOT>
-		</imageSettings>
-	</sheets>
+        <imageSettings>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>
+                        LLL:EXT:natural_carousel/Resources/Private/Language/locallang.xlf:flexform.tab.imageSettings
+                    </sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.format>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:natural_carousel/Resources/Private/Language/locallang.xlf:settings.thumbnailFormat
+                            </label>
+                            <config>
+                                <type>select</type>
+                                <items type="array">
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:natural_carousel/Resources/Private/Language/locallang.xlf:settings.thumbnailFormat.natural
+                                        </numIndex>
+                                        <numIndex index="1">natural</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:natural_carousel/Resources/Private/Language/locallang.xlf:settings.thumbnailFormat.square
+                                        </numIndex>
+                                        <numIndex index="1">square</numIndex>
+                                    </numIndex>
+                                </items>
+                                <minitems>0</minitems>
+                                <maxitems>1</maxitems>
+                            </config>
+                        </TCEforms>
+                    </settings.format>
+                    <settings.slidesPerView>
+                        <TCEforms>
+                            <label>
+                                Slides per view
+                            </label>
+                            <config>
+                                <type>input</type>
+                                <default>1</default>
+                                <eval>trim</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.slidesPerView>
+                    <settings.margin>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:natural_carousel/Resources/Private/Language/locallang.xlf:settings.margin
+                            </label>
+                            <config>
+                                <type>input</type>
+                                <default>10</default>
+                                <eval>trim</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.margin>
+                    <settings.slideHeight>
+                        <TCEforms>
+                            <label>
+                                Slide height
+                            </label>
+                            <config>
+                                <type>input</type>
+                                <default>400</default>
+                                <eval>trim</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.slideHeight>
+                    <settings.thumbnailHeight>
+                        <TCEforms>
+                            <label>
+                                Thumbnails height
+                            </label>
+                            <config>
+                                <type>input</type>
+                                <default>100</default>
+                                <eval>trim</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.thumbnailHeight>
+                </el>
+            </ROOT>
+        </imageSettings>
+    </sheets>
 </T3DataStructure>
