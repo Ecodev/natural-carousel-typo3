@@ -31,32 +31,20 @@ class SlideStackViewHelper extends AbstractViewHelper
         $slides = $this->templateVariableContainer->get('slides');
 
         $items = [];
+        /** @var \TYPO3\CMS\Core\Resource\FileReference $slide */
         foreach ($slides as $slide) {
 
             /** @var \TYPO3\CMS\Core\Resource\File $file */
-//            $file = ResourceFactory::getInstance()->getFileObject($slide->getUid());
-//            $thumbnailFile = $this->createProcessedFile($file, 'thumbnailMaximumWidth', 'thumbnailMaximumHeight');
-//            $enlargedFile = $this->createProcessedFile($file, 'enlargedImageMaximumWidth', 'enlargedImageMaximumHeight');
-
-            //            $item = [
-            //                'thumbnail' => '/' . $thumbnailFile->getPublicUrl(true),
-            //                'enlarged' => '/' . $enlargedFile->getPublicUrl(true),
-            //                'uid' => $file->getProperty('uid'),
-            //                'title' => $file->getProperty('title'),
-            //                'description' => $file->getProperty('description'),
-            //                'slideLink' => $file->getProperty('slideLink'),
-            //                'buttonLabel' => $file->getProperty('buttonLabel'),
-            //                'buttonLink' => $file->getProperty('buttonLink')
-            //            ];
+            $file = $slide->getOriginalFile();
 
             $item = [
-                'thumbnail' => "https://images.unsplash.com/photo-1459860263946-7966560ccaed?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=200&fit=max&s=08aed4f47fa91831e0cf9f72c574acc7",
-                'enlarged' => "https://images.unsplash.com/photo-1459860263946-7966560ccaed?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=baa81debe972e9efe3250efd7b7a0f58",
-                'title' => 'Title',
-                'desc' => 'Maecenas sed diam eget risus varius blandit sit amet non magna. <a href="asdf">Duis mollis</a>, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.',
-                'slideLink' => 'https => //ecodev.ch',
-                'buttonLabel' => 'Google',
-                'buttonLink' => 'https => //google.ch'
+                'thumbnail' => '/' . $this->createProcessedThumbnail($file)->getPublicUrl(true),
+                'enlarged' => '/' . $this->createProcessedEnlarged($file)->getPublicUrl(true),
+                'title' => $slide->getProperty('title'),
+                'desc' => $slide->getProperty('description'),
+                'slideLink' => $slide->getProperty('link'),
+                'refProp' => $slide->getProperties(),
+                'fileProp' => $file->getProperties()
             ];
 
             $items[] = $item;
@@ -72,16 +60,46 @@ class SlideStackViewHelper extends AbstractViewHelper
      * @return ProcessedFile
      * @internal param Content $slide
      */
-    public function createProcessedFile(File $file, $widthFormat, $heightFormat)
+    public function createProcessedEnlarged(File $file)
     {
         $configuration = [
-            'maxWidth' => $this->getSettings()[$widthFormat] ? $this->getSettings()[$widthFormat] : null,
-            'maxHeight' => $this->getSettings()[$heightFormat] ? $this->getSettings()[$heightFormat] : null,
+            'maxWidth' => $this->getSettings()['enlargedImageMaximumWidth'] ? $this->getSettings()['enlargedImageMaximumWidth'] : 1170,
+            'maxHeight' => $this->getSettings()['enlargedImageMaximumHeight'] ? $this->getSettings()['enlargedImageMaximumHeight'] : null,
         ];
 
         if ($configuration['maxWidth'] || $configuration['maxHeight']) {
             $file = $file->process(ProcessedFile::CONTEXT_IMAGECROPSCALEMASK, $configuration);
         }
+
+        return $file;
+    }
+
+    /**
+     * Resize image and garantees a minimum size for each dimension
+     * @param File $file
+     * @return File|ProcessedFile
+     */
+    public function createProcessedThumbnail(File $file)
+    {
+        $minSize = 84;
+
+        $width = (int) $file->getProperty('width');
+        $height = (int) $file->getProperty('height');
+        $ratio = $width / $height;
+
+        if ($width > $height) {
+            $configuration = [
+                'maxWidth' => ceil($minSize * $ratio),
+                'height' => $minSize
+            ];
+        } else {
+            $configuration = [
+                'width' => $minSize,
+                'maxHeight' => ceil($minSize / $ratio)
+            ];
+        }
+
+        $file = $file->process(ProcessedFile::CONTEXT_IMAGECROPSCALEMASK, $configuration);
 
         return $file;
     }

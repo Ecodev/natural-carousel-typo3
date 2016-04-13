@@ -1,19 +1,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"
 	  xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
-	  xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
-	  xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
 	  xmlns:carousel="http://typo3.org/ns/Fab/NaturalCarousel/ViewHelpers">
 
 	<f:layout name="Default"/>
-
-	<f:section name="Configuration">
-		<flux:form id="natural_carousel" options="{group: 'Special', Fluidcontent: {sorting: 200}, icon: '{f:uri.resource(path: \'Backend/Icons/Content/Carousel.png\')}'}">
-			<flux:field.checkbox name="settings.carousel.quickselect" default="1"/>
-			<flux:field.select name="settings.carousel.quickselectType" items="{images: 'images', dots: 'dots', numbers: 'numbers'}"/>
-			<flux:field.input name="settings.carousel.interval" default="5000" eval="int,trim"/>
-			<flux:field.input name="settings.carousel.id" default="{v:random.string(length: 8)}"/>
-		</flux:form>
-	</f:section>
 
 	<f:section name="main">
 
@@ -27,51 +16,21 @@
 			window.naturalCarousels = window.naturalCarousels || [];
 
 			var naturalCarousel = {};
-			naturalCarousel.id = Number('{data.uid}');
-			naturalCarousel.slidesData = {carousel:slideStack()};
+			naturalCarousel.slides = {carousel:slideStack()};
 
-			// Settings
-			//			naturalCarousel.autoReplay = Boolean('{settings.autoReplay}');
-			//			naturalCarousel.waitTime = Number('{settings.waitTime}');
-			//			naturalCarousel.loop = Boolean('{settings.loop}');
-			//			naturalCarousel.transitionTime = Number('{settings.transitionTime}');
-			//			naturalCarousel.freeMode = Boolean('{settings.freeMode}');
-			//			naturalCarousel.slidesPerView = Number('{settings.slidesPerView}');
-			//			naturalCarousel.margin = Number('{settings.margin}');
-
-			naturalCarousel.autoReplay = true;
-			naturalCarousel.waitTime = 2000;
-			naturalCarousel.loop = true;
-			naturalCarousel.transitionTime = 1000;
-			naturalCarousel.freeMode = false;
-			naturalCarousel.slidesPerView = 1;
-			naturalCarousel.margin = 0;
-
-			// @todo : to implement
-			//			naturalCarousel.slideHeight = Number('{settings.slideHeight}');
-			//			naturalCarousel.format = '{settings.format}';
-			//			naturalCarousel.autoPlay = Boolean('{settings.autoPlay}');
-			//			naturalCarousel.showThumbnails = Boolean('{settings.showThumbnails}');
-			//			naturalCarousel.thumbnailHeight = Number('{settings.thumbnailHeight}');
+			naturalCarousel.options = {
+				slideHeight: Number('{settings.slideHeight}'),
+				autoplay: Number('{settings.autoplay}'),
+				loop: '{settings.loop}' == true,
+				slidesPerView: Number('{settings.slidesPerView}'),
+				spaceBetween: Number('{settings.margin}'),
+				speed: Number('{settings.speed}'),
+			};
 
 			window.naturalCarousels.push(naturalCarousel);
 		</script>
 
-		<div class="swiper-container natural-carousel" id="natural-carousel-{data.uid}">
-			<!-- Additional required wrapper -->
-			<div class="swiper-pagination" id="swiper-pagination-{data.uid}"></div>
-			<div class="swiper-wrapper"></div>
-			<div class="swiper-button-prev" id="swiper-button-prev-{data.uid}">
-				<svg viewBox="0 0 12 7.41">
-					<use xlink:href="#natural-carousel-arrow-top"></use>
-				</svg>
-			</div>
-			<div class="swiper-button-next" id="swiper-button-next-{data.uid}">
-				<svg viewBox="0 0 12 7.41">
-					<use xlink:href="#natural-carousel-arrow-top"></use>
-				</svg>
-			</div>
-		</div>
+		<div class="swiper-container natural-carousel"></div>
 
 	</f:section>
 
