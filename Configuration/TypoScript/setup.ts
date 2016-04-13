@@ -34,7 +34,7 @@ plugin.tx_naturalcarousel {
 			}
 
 			NaturalCarouselThemeCSS {
-				path = EXT:natural_carousel/Resources/Public/StyleSheets/natural.min.css
+				path = EXT:natural_carousel/Resources/Public/StyleSheets/natural.css
 				#path = EXT:natural_carousel/Resources/Public/Dev/natural-carousel-js/dist/themes/natural.css
 				type = css
 
