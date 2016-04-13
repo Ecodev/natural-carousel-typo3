@@ -35,7 +35,7 @@
     color:#444444;
 }
 
-.natural-carousel-text-container .natural-carousel-text-button {
+.natural-carousel-text-container a {
     display:inline-block;
     margin-top:10px;
     padding:7px 20px;
@@ -44,4 +44,5 @@
     box-shadow:0 1px 1px rgba(0,0,0,0.3);
     border-radius:3px;
     text-decoration:none;
+    margin-right:10px;
 }
