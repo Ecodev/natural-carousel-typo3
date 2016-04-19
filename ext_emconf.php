@@ -16,7 +16,7 @@ $EM_CONF[$_EXTKEY] = array (
   'author_email' => 'fabien.udriot@ecodev.ch, samuel.baptista@ecodev.ch',
   'author_company' => 'Ecodev',
   'state' => 'beta',
-  'version' => '1.0.1-dev',
+  'version' => '1.0.2-dev',
   'constraints' =>
   array (
     'depends' =>
