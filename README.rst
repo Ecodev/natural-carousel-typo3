@@ -5,7 +5,7 @@ Natural Carousel Typo3
 Display images as you scroll. Images are displayed within a slideshow when enlarged.
 Under the hood it uses the Media API and relies on categories to filter images on the FE.
 
-.. image:: https://raw.github.com/Ecodev/natural_carousel/master/Documentation/Introduction-01.png
+.. image:: https://raw.github.com/Ecodev/natural-carousel-typo3/master/Documentation/Introduction-01.png
 
 
 Project info and releases
@@ -28,19 +28,19 @@ Users manual
 
 To install a gallery on a page, click on the page where the gallery should be displayed and create a new content element.
 
-.. image:: https://raw.github.com/Ecodev/natural_carousel/master/Documentation/UserManual-01.png
+.. image:: https://raw.github.com/Ecodev/natural-carousel-typo3/master/Documentation/UserManual-01.png
 
 Choose the plugin "Infinite Scroll Gallery"
 
-.. image:: https://raw.github.com/Ecodev/natural_carousel/master/Documentation/UserManual-02.png
+.. image:: https://raw.github.com/Ecodev/natural-carousel-typo3/master/Documentation/UserManual-02.png
 
 Give a Header if necessary and choose the "Plugin" tab.
 
-.. image:: https://raw.github.com/Ecodev/natural_carousel/master/Documentation/UserManual-03.png
+.. image:: https://raw.github.com/Ecodev/natural-carousel-typo3/master/Documentation/UserManual-03.png
 
 Choose "Infinite Scroll Gallery" plugin
 
-.. image:: https://raw.github.com/Ecodev/natural_carousel/master/Documentation/UserManual-04.png
+.. image:: https://raw.github.com/Ecodev/natural-carousel-typo3/master/Documentation/UserManual-04.png
 
 Once the plugin "Infinite Scroll Gallery" is selected, configuration is self explanatory.
 
