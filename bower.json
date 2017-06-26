@@ -1,6 +1,5 @@
 {
   "name": "natural_carousel",
-  "version": "1.0.2",
   "ignore": [],
   "devDependencies": {
     "Swiper": "swiper#^3.3.1",
