@@ -1,6 +1,17 @@
 ==============
-Natural Carousel Typo3
+Natural Carousel TYPO3 |download| |version| |license|
 ==============
+
+.. |download| image:: https://poser.pugx.org/fab/natural-carousel/downloads
+    :target: https://packagist.org/packages/fab/natural-carousel
+    :alt: Total Downloads
+.. |version| image:: https://poser.pugx.org/fab/natural-carousel/v/stable
+    :target: https://packagist.org/packages/fab/natural-carousel
+    :alt: Latest Stable Version
+.. |license| image:: https://poser.pugx.org/fab/natural-carousel/license
+    :target: https://packagist.org/packages/fab/natural-carousel
+    :alt: License
+
 
 Display images as you scroll. Images are displayed within a slideshow when enlarged.
 Under the hood it uses the Media API and relies on categories to filter images on the FE.
@@ -11,13 +22,9 @@ Under the hood it uses the Media API and relies on categories to filter images o
 Project info and releases
 =========================
 
-The home page of the project is on https://github.com/Ecodev/natural_carousel.git
+The home page of the project is on https://github.com/Ecodev/natural-carousel-typo3
 
-Stable version:
-http://typo3.org/extensions/repository/view/natural_carousel
-
-Development version:
-https://github.com/Ecodev/natural_carousel.git
+Stable version: https://extensions.typo3.org/extension/natural_carousel/
 
 ::
 
