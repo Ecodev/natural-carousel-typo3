@@ -15,18 +15,27 @@
 		<script type="text/javascript">
 			window.naturalCarousels = window.naturalCarousels || [];
 
+			var slideHeight = Number('{settings.slideHeight -> f:format.raw()}');
+			var autoplay = Number('{settings.autoplay}');
+			var loop = '{settings.loop}' == true;
+			var slidesPerView = Number('{settings.slidesPerView}');
+			var spaceBetween = Number('{settings.margin}');
+			var speed = Number('{settings.speed}');
+			var blur = '{settings.blur}' == true;
+			var effect = '{settings.effect}';
+
 			var naturalCarousel = {};
 			naturalCarousel.slides = {carousel:slideStack()->f:format.raw()};
 
 			naturalCarousel.options = {
-				slideHeight: Number('{settings.slideHeight}'),
-				autoplay: Number('{settings.autoplay}'),
-				loop: '{settings.loop}' == true,
-				slidesPerView: Number('{settings.slidesPerView}'),
-				spaceBetween: Number('{settings.margin}'),
-				speed: Number('{settings.speed}'),
-				blur: '{settings.blur}' == true,
-				effect: '{settings.effect}'
+				slideHeight: slideHeight,
+				autoplay: autoplay,
+				loop: loop,
+				slidesPerView: slidesPerView,
+				spaceBetween: spaceBetween,
+				speed: speed,
+				blur: blur,
+				effect: effect
 			};
 
 			window.naturalCarousels.push(naturalCarousel);
