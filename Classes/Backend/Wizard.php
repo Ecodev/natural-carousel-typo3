@@ -31,7 +31,7 @@ class tx_naturalcarousel_wizard
     function proc($wizardItems)
     {
         $wizardItems['plugins_tx_naturalcarousel_pi1'] = array(
-            'icon' => ExtensionManagementUtility::extRelPath('natural_carousel') . 'Resources/Public/Images/NaturalCarousel.png',
+            'icon' => 'EXT:natural_carousel/Resources/Public/Images/NaturalCarousel.png',
             'title' => $this->getLanguageService()->sL('LLL:EXT:natural_carousel/Resources/Private/Language/locallang.xlf:wizard.title'),
             'description' => $this->getLanguageService()->sL('LLL:EXT:natural_carousel/Resources/Private/Language/locallang.xlf:wizard.description'),
             'params' => '&defVals[tt_content][CType]=list&defVals[tt_content][list_type]=naturalcarousel_pi1'
