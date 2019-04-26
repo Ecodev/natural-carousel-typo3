@@ -7,14 +7,14 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'Fabien Udriot, Samuel Baptista',
     'author_email' => 'fabien.udriot@ecodev.ch, samuel.baptista@ecodev.ch',
     'author_company' => 'Ecodev',
-    'state' => 'beta',
-    'version' => '1.0.9',
+    'state' => 'stable',
+    'version' => '2.0.0',
     'constraints' =>
         [
             'depends' =>
                 [
-                    'typo3' => '7.6.0-9.5.99',
-                    'vidi' => '0.0.0-0.0.0',
+                    'typo3' => '9.5.0-9.5.99',
+                    'vidi' => '3.0.0-0.0.0',
                 ],
             'conflicts' =>
                 [
