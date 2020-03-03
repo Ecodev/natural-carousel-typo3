@@ -19,7 +19,7 @@
 		}
 	},
 	"replace": {
-		"natural_carousel": "self.version",
+		"fab/natural_carousel": "self.version",
 		"typo3-ter/natural_carousel": "self.version"
 	}
 }
