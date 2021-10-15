@@ -11,9 +11,8 @@ namespace Fab\NaturalCarousel\Controller;
  * The TYPO3 project - inspiring people to share!
  */
 
-use Fab\Vidi\Domain\Repository\ContentRepositoryFactory;
+use TYPO3\CMS\Core\Resource\FileRepository;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
-use TYPO3\CMS\Core\Resource\ResourceFactory;
 
 
 /**
@@ -38,34 +37,8 @@ class CarouselController extends ActionController
     public function listAction()
     {
 
-        $fileRepository = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Resource\\FileRepository');
+        $fileRepository = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(FileRepository::class);
         $elements = $fileRepository->findByRelation('tt_content', 'images', $this->configurationManager->getcontentObject()->data['uid']);
-
-//        echo "<pre>";
-////        print_r($elements);
-//        echo "</pre>";
-//
-//        foreach ($elements as $element) {
-//            $file = ResourceFactory::getInstance()->getFileObject($element['uid_local']);
-//
-//            echo "<pre>";
-//            print_r($file);
-//            echo "</pre>";
-//
-//        }
-//        exit();
-        //
-        //        exit();
-        //        // get Imageobject information
-        //        $files = array();
-        //        foreach ($elements as $key => $value) {
-        //            $files[$key]['reference'] = $value->getReferenceProperties();
-        //            $files[$key]['original'] = $value->getOriginalFile()->getProperties();
-        //        }
-        //        $output = '';
-        //        foreach ($files as $key => $value) {
-        //            $output .= $value['reference']['name'].'<br>';
-        //        }
 
         // Assign template variables
         $this->view->assign('settings', $this->settings);
