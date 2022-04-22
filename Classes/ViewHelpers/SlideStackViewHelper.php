@@ -38,8 +38,8 @@ class SlideStackViewHelper extends AbstractViewHelper
             $file = $slide->getOriginalFile();
 
             $item = [
-                'thumbnail' => '/' . $this->createProcessedThumbnail($file)->getPublicUrl(true),
-                'enlarged' => '/' . $this->createProcessedEnlarged($file)->getPublicUrl(true),
+                'thumbnail' => $this->createProcessedThumbnail($file)->getPublicUrl(true),
+                'enlarged' => $this->createProcessedEnlarged($file)->getPublicUrl(true),
                 'title' => $slide->getProperty('title'),
                 'desc' => $slide->getProperty('description'),
                 'slideLink' => $slide->getProperty('link'),
