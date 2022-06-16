@@ -1,34 +1,16 @@
 <?php
+
 namespace Fab\NaturalCarousel\Controller;
 
-/**
- * This file is part of the TYPO3 CMS project.
- * It is free software; you can redistribute it and/or modify it under
- * the terms of the GNU General Public License, either version 2
- * of the License, or any later version.
- * For the full copyright and license information, please read the
- * LICENSE.txt file that was distributed with this source code.
- * The TYPO3 project - inspiring people to share!
- */
-
 use TYPO3\CMS\Core\Resource\FileRepository;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
-
-/**
- * Controller
- */
 class CarouselController extends ActionController
 {
 
-    /**
-     * @var array
-     */
-    protected $configuration = array();
+    protected array $configuration = array();
 
-    /**
-     * @var array
-     */
     protected $settings = array();
 
     /**
@@ -37,7 +19,7 @@ class CarouselController extends ActionController
     public function listAction()
     {
 
-        $fileRepository = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(FileRepository::class);
+        $fileRepository = GeneralUtility::makeInstance(FileRepository::class);
         $elements = $fileRepository->findByRelation('tt_content', 'images', $this->configurationManager->getcontentObject()->data['uid']);
 
         // Assign template variables

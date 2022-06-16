@@ -1,4 +1,7 @@
 <?php
+
+use Fab\NaturalCarousel\Controller\CarouselController;
+
 defined('TYPO3_MODE') or die();
 
 call_user_func(
@@ -8,7 +11,7 @@ call_user_func(
             'Fab.natural_carousel',
             'Pi1',
             [
-                'Carousel' => 'list',
+                CarouselController::class => 'list',
             ],
             // non-cachable actions
             []
