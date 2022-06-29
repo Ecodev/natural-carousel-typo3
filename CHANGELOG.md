@@ -1,3 +1,9 @@
+## 3.0.1 (2022-06-29)
+
+[FIX] Add base url
+[TASK] Composer validate
+[TASK] Add changelog
+
 ## 3.0.0 (2022-06-17)
 
 [FIX] TYPO3 compatibility
