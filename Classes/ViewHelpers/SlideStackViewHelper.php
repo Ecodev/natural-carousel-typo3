@@ -37,9 +37,14 @@ class SlideStackViewHelper extends AbstractViewHelper
             /** @var \TYPO3\CMS\Core\Resource\File $file */
             $file = $slide->getOriginalFile();
 
+            /** @var \TYPO3\CMS\Core\Http\ServerRequest $request */
+            $request = $GLOBALS['TYPO3_REQUEST'];
+            $site = $request->getAttribute('site');
+            $baseUrl = $site->getBase()->getScheme() . '://' . $site->getBase()->getHost() . $site->getBase()->getPath();
+
             $item = [
-                'thumbnail' => '/' . $this->createProcessedThumbnail($file)->getPublicUrl(true),
-                'enlarged' => '/' . $this->createProcessedEnlarged($file)->getPublicUrl(true),
+                'thumbnail' => $baseUrl . '/' . $this->createProcessedThumbnail($file)->getPublicUrl(),
+                'enlarged' => $baseUrl . '/' . $this->createProcessedEnlarged($file)->getPublicUrl(),
                 'title' => $slide->getProperty('title'),
                 'desc' => $slide->getProperty('description'),
                 'slideLink' => $slide->getProperty('link'),
