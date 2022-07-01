@@ -1,3 +1,7 @@
+## 3.0.3 (2022-07-01)
+
+[FIX] Image selection in backend
+
 ## 3.0.2 (2022-06-29)
 
 [FIX] Base url
