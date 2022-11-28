@@ -13,7 +13,7 @@
                 <el>
                     <settings.images>
                         <TCEforms>
-                            <label>LLL:EXT:lang/locallang_general.xlf:LGL.images</label>
+                            <label>LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.images</label>
                             <config>
                                 <type>inline</type>
                                 <foreign_field>uid_foreign</foreign_field>
