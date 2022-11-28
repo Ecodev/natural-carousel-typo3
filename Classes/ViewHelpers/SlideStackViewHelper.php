@@ -15,6 +15,7 @@ use Fab\Vidi\Domain\Model\Content;
 use TYPO3\CMS\Core\Resource\File;
 use TYPO3\CMS\Core\Resource\ProcessedFile;
 use TYPO3\CMS\Core\Resource\ResourceFactory;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 /**
@@ -37,9 +38,10 @@ class SlideStackViewHelper extends AbstractViewHelper
             /** @var \TYPO3\CMS\Core\Resource\File $file */
             $file = $slide->getOriginalFile();
 
+            $baseUrl = GeneralUtility::getIndpEnv('TYPO3_SITE_URL');
             $item = [
-                'thumbnail' => $this->createProcessedThumbnail($file)->getPublicUrl(true),
-                'enlarged' => $this->createProcessedEnlarged($file)->getPublicUrl(true),
+                'thumbnail' => $baseUrl . $this->createProcessedThumbnail($file)->getPublicUrl(),
+                'enlarged' => $baseUrl . $this->createProcessedEnlarged($file)->getPublicUrl(),
                 'title' => $slide->getProperty('title'),
                 'desc' => $slide->getProperty('description'),
                 'slideLink' => $slide->getProperty('link'),

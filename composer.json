@@ -4,7 +4,7 @@
 	"description": "Natural Carousel gallery.",
 	"homepage": "https://github.com/Ecodev/natural-carousel-typo3",
 	"license": [
-		"GPL-2.0+"
+		"GPL-2.0-or-later"
 	],
 	"keywords": [
 		"TYPO3 CMS",
@@ -19,12 +19,15 @@
 		}
 	},
 	"replace": {
-		"fab/natural_carousel": "self.version",
-		"typo3-ter/natural_carousel": "self.version"
+		"fab/natural_carousel": "self.version"
 	},
 	"extra": {
 		"typo3/cms": {
 			"extension-key": "natural_carousel"
 		}
+	},
+	"require": {
+		"typo3/cms-core": "^11.5",
+		"fab/vidi": "*"
 	}
 }

@@ -16,37 +16,6 @@
                             <label>LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.images</label>
                             <config>
                                 <type>inline</type>
-                                <appearance type="array">
-                                    <createNewRelationLinkTitle>LLL:EXT:natural_carousel/Resources/Private/Language/locallang.xlf:settings.images.new
-                                    </createNewRelationLinkTitle>
-                                    <enabledControls type="array">
-                                        <delete>1</delete>
-                                        <dragdrop>1</dragdrop>
-                                        <hide>1</hide>
-                                        <info>1</info>
-                                        <localize>1</localize>
-                                    </enabledControls>
-                                    <headerThumbnail type="array">
-                                        <field>uid_local</field>
-                                        <height>45c</height>
-                                        <width>45</width>
-                                    </headerThumbnail>
-                                    <useSortable>1</useSortable>
-                                </appearance>
-                                <foreign_types type="array">
-                                    <numIndex index="2" type="array">
-                                        <showitem>
-                                            --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,--palette--;;filePalette
-                                        </showitem>
-                                    </numIndex>
-                                </foreign_types>
-                                <behaviour type="array">
-                                    <localizationMode>select</localizationMode>
-                                    <localizeChildrenAtParentLocalization>1</localizeChildrenAtParentLocalization>
-                                </behaviour>
-                                <filter type="array">
-
-                                </filter>
                                 <foreign_field>uid_foreign</foreign_field>
                                 <foreign_label>uid_local</foreign_label>
                                 <foreign_match_fields type="array">
@@ -54,10 +23,9 @@
                                 </foreign_match_fields>
                                 <foreign_selector>uid_local</foreign_selector>
                                 <foreign_selector_fieldTcaOverride type="array">
-                                    <config type="array">
-                                        <appearance type="array">
-                                            <elementBrowserAllowed>gif,jpg,jpeg,png,svg
-                                            </elementBrowserAllowed>
+                                    <config>
+                                        <appearance>
+                                            <elementBrowserAllowed>gif,jpg,jpeg,png,svg</elementBrowserAllowed>
                                             <elementBrowserType>file</elementBrowserType>
                                         </appearance>
                                     </config>
@@ -67,11 +35,65 @@
                                 <foreign_table_field>tablenames</foreign_table_field>
                                 <maxitems>100</maxitems>
                                 <minitems>0</minitems>
+                                <appearance type="array">
+                                    <newRecordLinkAddTitle>1</newRecordLinkAddTitle>
+                                    <headerThumbnail>
+                                        <field>uid_local</field>
+                                        <height>64</height>
+                                        <width>64</width>
+                                    </headerThumbnail>
+                                    <enabledControls>
+                                        <info>1</info>
+                                        <new>0</new>
+                                        <dragdrop>0</dragdrop>
+                                        <sort>1</sort>
+                                        <hide>0</hide>
+                                        <delete>1</delete>
+                                        <localize>1</localize>
+                                    </enabledControls>
+                                    <createNewRelationLinkTitle>
+                                        LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference
+                                    </createNewRelationLinkTitle>
+                                </appearance>
+                                <foreign_types>
+                                    <numIndex index="0">
+                                        <showitem>
+                                            --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,--palette--;;filePalette
+                                        </showitem>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <showitem>
+                                            --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,--palette--;;filePalette
+                                        </showitem>
+                                    </numIndex>
+                                </foreign_types>
+                                <behaviour>
+                                    <localizationMode>select</localizationMode>
+                                    <localizeChildrenAtParentLocalization>1</localizeChildrenAtParentLocalization>
+                                </behaviour>
+
+                                <overrideChildTca>
+                                    <columns type="array">
+                                        <uid_local type="array">
+                                            <config type="array">
+                                                <appearance type="array">
+                                                    <elementBrowserType>file</elementBrowserType>
+                                                    <elementBrowserAllowed>jpg,png,svg,jpeg,gif</elementBrowserAllowed>
+                                                </appearance>
+                                            </config>
+                                        </uid_local>
+                                    </columns>
+                                    <types type="array">
+                                        <numIndex index="2">
+                                            <showitem>
+                                                --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,--palette--;;filePalette
+                                            </showitem>
+                                        </numIndex>
+                                    </types>
+                                </overrideChildTca>
                             </config>
                         </TCEforms>
                     </settings.images>
-
-
                 </el>
             </ROOT>
         </selection>
@@ -102,7 +124,6 @@
                             </label>
                             <config>
                                 <type>input</type>
-                                <default></default>
                                 <eval>trim</eval>
                             </config>
                         </TCEforms>
@@ -112,7 +133,6 @@
                             <label>Transition time</label>
                             <config>
                                 <type>input</type>
-                                <default></default>
                                 <eval>trim</eval>
                             </config>
                         </TCEforms>
@@ -209,17 +229,6 @@
                             </config>
                         </TCEforms>
                     </settings.slideHeight>
-                    <!--<settings.showThumbnails>-->
-                        <!--<TCEforms>-->
-                            <!--<label>-->
-                                <!--Show thumbnails-->
-                            <!--</label>-->
-                            <!--<config>-->
-                                <!--<type>check</type>-->
-                                <!--<default>0</default>-->
-                            <!--</config>-->
-                        <!--</TCEforms>-->
-                    <!--</settings.showThumbnails>-->
                 </el>
             </ROOT>
         </slideSettings>
