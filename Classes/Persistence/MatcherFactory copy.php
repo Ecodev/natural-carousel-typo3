@@ -199,7 +199,7 @@ class MatcherFactory implements SingletonInterface
                 }
             } elseif ($fieldNameAndPath === 'text') {
                 // Special case if field is "text" which is a pseudo field in this case.
-                // Set the search term which means Vidi will
+                // Set the search term which means NaturalCarousel will
                 // search in various fields with operator "like". The fields come from key "searchFields" in the TCA.
                 $matcher->setSearchTerm($value);
             }

@@ -14,9 +14,9 @@ namespace Fab\NaturalCarousel\Backend;
  * The TYPO3 project - inspiring people to share!
  */
 
-use Fab\Vidi\Domain\Model\Selection;
-use Fab\Vidi\Domain\Repository\SelectionRepository;
-use Fab\Vidi\Tca\Tca;
+use Fab\NaturalCarousel\Domain\Model\Selection;
+use Fab\NaturalCarousel\Domain\Repository\SelectionRepository;
+use Fab\NaturalCarousel\Tca\Tca;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Configuration\BackendConfigurationManager;
 use TYPO3\CMS\Extbase\Object\ObjectManager;

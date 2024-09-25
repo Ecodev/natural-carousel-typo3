@@ -14,8 +14,8 @@ namespace Fab\NaturalCarousel\Persistence;
  * The TYPO3 project - inspiring people to share!
  */
 
-use Fab\Vidi\Persistence\Order;
-use Fab\Vidi\Tca\Tca;
+use Fab\NaturalCarousel\Persistence\Order;
+use Fab\NaturalCarousel\Tca\Tca;
 use TYPO3\CMS\Core\SingletonInterface;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
