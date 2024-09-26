@@ -28,30 +28,6 @@ use TYPO3\CMS\Extbase\Service\TypoScriptService;
 class TceForms
 {
 
-
-    /**
-     * This method modifies the list of items for FlexForm "selection".
-     *
-     * @param array $parameters
-     */
-    public function getSelections(&$parameters)
-    {
-
-        $parameters['items'][] = array('', '', NULL);
-
-        /** @var SelectionRepository $selectionRepository */
-        $selectionRepository = $this->getObjectManager()->get(SelectionRepository::class);
-        $selections = $selectionRepository->findForEveryone('sys_file');
-
-        if ($selections) {
-            foreach ($selections as $selection) {
-                /** @var Selection $selection */
-                $values = array($selection->getName(), $selection->getUid(), NULL);
-                $parameters['items'][] = $values;
-            }
-        }
-    }
-
     /**
      * @param $parameters
      * @return string
