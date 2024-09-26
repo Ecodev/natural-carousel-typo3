@@ -14,9 +14,6 @@ namespace Fab\NaturalCarousel\Backend;
  * The TYPO3 project - inspiring people to share!
  */
 
-use Fab\Vidi\Domain\Model\Selection;
-use Fab\Vidi\Domain\Repository\SelectionRepository;
-use Fab\Vidi\Tca\Tca;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Configuration\BackendConfigurationManager;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
@@ -28,29 +25,6 @@ use TYPO3\CMS\Extbase\Service\TypoScriptService;
 class TceForms
 {
 
-
-    /**
-     * This method modifies the list of items for FlexForm "selection".
-     *
-     * @param array $parameters
-     */
-    public function getSelections(&$parameters)
-    {
-
-        $parameters['items'][] = array('', '', NULL);
-
-        /** @var SelectionRepository $selectionRepository */
-        $selectionRepository = $this->getObjectManager()->get(SelectionRepository::class);
-        $selections = $selectionRepository->findForEveryone('sys_file');
-
-        if ($selections) {
-            foreach ($selections as $selection) {
-                /** @var Selection $selection */
-                $values = array($selection->getName(), $selection->getUid(), NULL);
-                $parameters['items'][] = $values;
-            }
-        }
-    }
 
     /**
      * @param $parameters
