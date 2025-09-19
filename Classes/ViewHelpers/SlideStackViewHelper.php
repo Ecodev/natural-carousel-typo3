@@ -17,6 +17,7 @@ use TYPO3\CMS\Core\Resource\ResourceFactory;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Site\SiteFinder;
 use TYPO3\CMS\Core\Site\Entity\Site;
+use TYPO3\CMS\Core\Context\Context;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 /**
@@ -124,7 +125,12 @@ class SlideStackViewHelper extends AbstractViewHelper
     protected function getSiteUrl(): string
     {
         $siteFinder = GeneralUtility::makeInstance(SiteFinder::class);
-        $site = $siteFinder->getSiteByPageId($GLOBALS['TSFE']->id ?? 1);
+        
+        // Get current page ID from context or fallback to 1
+        $context = GeneralUtility::makeInstance(Context::class);
+        $pageId = $context->getPropertyFromAspect('frontend.page', 'id', 1);
+        
+        $site = $siteFinder->getSiteByPageId($pageId);
         return (string)$site->getBase();
     }
 }
