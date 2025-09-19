@@ -15,6 +15,8 @@ use TYPO3\CMS\Core\Resource\File;
 use TYPO3\CMS\Core\Resource\ProcessedFile;
 use TYPO3\CMS\Core\Resource\ResourceFactory;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Site\SiteFinder;
+use TYPO3\CMS\Core\Site\Entity\Site;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 /**
@@ -37,7 +39,7 @@ class SlideStackViewHelper extends AbstractViewHelper
             /** @var \TYPO3\CMS\Core\Resource\File $file */
             $file = $slide->getOriginalFile();
 
-            $baseUrl = GeneralUtility::getIndpEnv('TYPO3_SITE_URL');
+            $baseUrl = $this->getSiteUrl();
             $item = [
                 'thumbnail' => $baseUrl . $this->createProcessedThumbnail($file)->getPublicUrl(),
                 'enlarged' => $baseUrl . $this->createProcessedEnlarged($file)->getPublicUrl(),
@@ -113,5 +115,16 @@ class SlideStackViewHelper extends AbstractViewHelper
         $settings = $this->templateVariableContainer->get('settings');
 
         return $settings;
+    }
+
+    /**
+     * Get the site URL
+     * @return string
+     */
+    protected function getSiteUrl(): string
+    {
+        $siteFinder = GeneralUtility::makeInstance(SiteFinder::class);
+        $site = $siteFinder->getSiteByPageId($GLOBALS['TSFE']->id ?? 1);
+        return (string)$site->getBase();
     }
 }
