@@ -16,6 +16,7 @@ namespace Fab\NaturalCarousel\ViewHelpers;
 
 use FluidTYPO3\Vhs\Asset;
 use TYPO3\CMS\Core\Core\Environment;
+use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\PathUtility;
@@ -26,6 +27,18 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
  */
 class LoadAssetsViewHelper extends AbstractViewHelper
 {
+    /**
+     * @var PageRenderer
+     */
+    protected PageRenderer $pageRenderer;
+
+    /**
+     * @param PageRenderer $pageRenderer
+     */
+    public function __construct(PageRenderer $pageRenderer)
+    {
+        $this->pageRenderer = $pageRenderer;
+    }
 
     /**
      * @return void
@@ -76,9 +89,9 @@ class LoadAssetsViewHelper extends AbstractViewHelper
         $fileNameAndPath = PathUtility::stripPathSitePrefix($fileNameAndPath);
 
         if ($asset['type'] === 'js') {
-            $this->getPageRenderer()->addJsFooterFile($fileNameAndPath);
+            $this->pageRenderer->addJsFooterFile($fileNameAndPath);
         } elseif ($asset['type'] === 'css') {
-            $this->getPageRenderer()->addCssFile($fileNameAndPath);
+            $this->pageRenderer->addCssFile($fileNameAndPath);
         }
     }
 
@@ -121,14 +134,6 @@ class LoadAssetsViewHelper extends AbstractViewHelper
             }
         }
         return $resolvedFile;
-    }
-
-    /**
-     * @return \TYPO3\CMS\Core\Page\PageRenderer
-     */
-    protected function getPageRenderer()
-    {
-        return \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Page\PageRenderer::class);
     }
 
     /**
