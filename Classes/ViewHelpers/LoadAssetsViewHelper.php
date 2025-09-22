@@ -43,7 +43,7 @@ class LoadAssetsViewHelper extends AbstractViewHelper
     /**
      * @return void
      */
-    public function render()
+    public function render(): void
     {
         $settings = $this->templateVariableContainer->get('settings');
 

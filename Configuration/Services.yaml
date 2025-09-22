@@ -1,0 +1,16 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Fab\NaturalCarousel\Controller\:
+    resource: '../Classes/Controller/'
+    tags: ['controller.service_arguments']
+
+  Fab\NaturalCarousel\Utility\:
+    resource: '../Classes/Utility/'
+
+  Fab\NaturalCarousel\ViewHelpers\:
+    resource: '../Classes/ViewHelpers/'
+    tags: ['typo3.fluid.viewhelper']

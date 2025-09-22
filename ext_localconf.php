@@ -8,7 +8,7 @@ call_user_func(
     function () {
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'Fab.natural_carousel',
+            'natural_carousel',
             'Pi1',
             [
                 CarouselController::class => 'list',

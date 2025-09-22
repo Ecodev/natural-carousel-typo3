@@ -19,14 +19,18 @@ class CarouselController extends ActionController
     /**
      * @return void
      */
-    public function listAction()
+    public function listAction(): \Psr\Http\Message\ResponseInterface
     {
-        $elements = $this->fileRepository->findByRelation('tt_content', 'images', $this->configurationManager->getcontentObject()->data['uid']);
+        $currentContentObject = $this->request->getAttribute('currentContentObject');
+        $contentUid = $currentContentObject ? $currentContentObject->data['uid'] : 0;
+        
+        $elements = $this->fileRepository->findByRelation('tt_content', 'images', $contentUid);
 
         // Assign template variables
         $this->view->assign('settings', $this->settings);
-        $this->view->assign('data', $this->configurationManager->getcontentObject()->data);
+        $this->view->assign('data', $currentContentObject ? $currentContentObject->data : []);
         $this->view->assign('slides', $elements);
+        return $this->htmlResponse();
     }
 
 }
