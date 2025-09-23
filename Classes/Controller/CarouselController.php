@@ -3,17 +3,18 @@
 namespace Fab\NaturalCarousel\Controller;
 
 use TYPO3\CMS\Core\Resource\FileRepository;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 class CarouselController extends ActionController
 {
     protected array $configuration = array();
     protected $settings = array();
-    protected FileRepository $fileRepository;
+    protected ?FileRepository $fileRepository = null;
 
-    public function __construct(FileRepository $fileRepository)
+    public function __construct()
     {
-        $this->fileRepository = $fileRepository;
+        $this->fileRepository = GeneralUtility::makeInstance(FileRepository::class);
     }
 
     /**

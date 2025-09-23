@@ -12,8 +12,22 @@
 
 		<carousel:loadAssets/>
 
+		<!-- Load CSS manually if assets are not loaded -->
+		<f:asset.css identifier="swiper-css" src="EXT:natural_carousel/Resources/Public/StyleSheets/swiper.min.css" />
+		<f:asset.css identifier="natural-carousel-css" src="EXT:natural_carousel/Resources/Public/StyleSheets/natural-carousel.min.css" />
+		<f:asset.css identifier="natural-theme-css" src="EXT:natural_carousel/Resources/Public/StyleSheets/natural.css" />
+		<f:asset.css identifier="master-css" src="EXT:natural_carousel/Resources/Public/StyleSheets/master.css" />
+
+
+
+		<!-- Load JS -->
+		<f:asset.script identifier="swiper-js" src="EXT:natural_carousel/Resources/Public/JavaScript/swiper.jquery.min.js" />
+		<f:asset.script identifier="natural-carousel-js" src="EXT:natural_carousel/Resources/Public/JavaScript/natural-carousel.min.js" />
+		<f:asset.script identifier="master-js" src="EXT:natural_carousel/Resources/Public/JavaScript/master.js" />
+
+		<!-- Configure carousel after JS is loaded -->
 		<script type="text/javascript">
-			window.naturalCarousels = window.naturalCarousels || [];
+						window.naturalCarousels = window.naturalCarousels || [];
 
 			var slideHeight = Number('{settings.slideHeight -> f:format.raw()}');
 			var autoplay = Number('{settings.autoplay}');
@@ -22,10 +36,10 @@
 			var spaceBetween = Number('{settings.margin}');
 			var speed = Number('{settings.speed}');
 			var blur = '{settings.blur}' == true;
-			var effect = '{settings.effect}';
+			var effect = 'slide'; // Temporarily disable coverflow to see images
 
 			var naturalCarousel = {};
-			naturalCarousel.slides = {carousel:slideStack()->f:format.raw()};
+			naturalCarousel.slides = {carousel:slideStack() -> f:format.raw()};
 
 			naturalCarousel.options = {
 				slideHeight: slideHeight,
@@ -35,7 +49,15 @@
 				spaceBetween: spaceBetween,
 				speed: speed,
 				blur: blur,
-				effect: effect
+				effect: effect,
+				// Fix coverflow effect parameters
+				coverflowEffect: {
+					rotate: 50,
+					stretch: 0,
+					depth: 100,
+					modifier: 1,
+					slideShadows: true
+				}
 			};
 
 			window.naturalCarousels.push(naturalCarousel);
