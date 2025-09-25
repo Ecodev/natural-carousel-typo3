@@ -60,3 +60,9 @@
     width: 100%;
     height: auto;
 }
+
+.swiper-container {
+   .swiper-button-next, .swiper-button-next {
+        background-image: none !important;
+    }
+}
