@@ -19,22 +19,12 @@ class PartialLoadingRegister
 
     protected static $registry = [];
 
-    protected static $_instance = null;
-
-    public static function getInstance()
-    {
-        if (is_null(self::$_instance)) {
-            self::$_instance = new PartialLoadingRegister();
-        }
-
-        return self::$_instance;
-    }
-
-    private function __construct()
+ 
+    public function __construct()
     {
     }
 
-    private function register(string $name): void
+    public function register(string $name): void
     {
         self::$registry[$name] = true;
     }
@@ -46,7 +36,7 @@ class PartialLoadingRegister
     public function usePartial(string $name): bool
     {
         $isUsed = isset(self::$registry[$name]);
-        self::register($name);
+        $this->register($name);
 
         return $isUsed;
     }

@@ -26,11 +26,12 @@ class CarouselController extends ActionController
         $contentUid = $currentContentObject ? $currentContentObject->data['uid'] : 0;
         
         $elements = $this->fileRepository->findByRelation('tt_content', 'images', $contentUid);
-
-        // Assign template variables
-        $this->view->assign('settings', $this->settings);
-        $this->view->assign('data', $currentContentObject ? $currentContentObject->data : []);
-        $this->view->assign('slides', $elements);
+        $this->view->assignMultiple([
+            'settings' => $this->settings,
+            'data' => $currentContentObject ? $currentContentObject->data : [],
+            'slides' => $elements
+        ]);
+        
         return $this->htmlResponse();
     }
 
