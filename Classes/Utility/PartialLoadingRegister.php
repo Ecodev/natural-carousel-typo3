@@ -11,48 +11,32 @@ namespace Fab\NaturalCarousel\Utility;
  * The TYPO3 project - inspiring people to share!
  */
 
-use FluidTYPO3\Vhs\Asset;
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Core\Utility\PathUtility;
-use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
-
 /**
- * View helper to load a JavaScript file
+ * Utility class to manage partial loading registry
  */
-class PartialLoadingRegister extends AbstractViewHelper
+class PartialLoadingRegister
 {
 
     protected static $registry = [];
 
-    protected static $_instance = null;
-
-    public static function getInstance()
-    {
-        if (is_null(self::$_instance)) {
-            self::$_instance = new PartialLoadingRegister();
-        }
-
-        return self::$_instance;
-    }
-
-    private function __construct()
+ 
+    public function __construct()
     {
     }
 
-    private function register($name)
+    public function register(string $name): void
     {
         self::$registry[$name] = true;
     }
 
     /**
-     * @param $name
+     * @param string $name
      * @return bool
      */
-    public function usePartial($name)
+    public function usePartial(string $name): bool
     {
         $isUsed = isset(self::$registry[$name]);
-        self::register($name);
+        $this->register($name);
 
         return $isUsed;
     }

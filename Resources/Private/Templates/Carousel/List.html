@@ -2,47 +2,52 @@
 	  xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
 	  xmlns:carousel="http://typo3.org/ns/Fab/NaturalCarousel/ViewHelpers">
 
-	<f:layout name="Default"/>
+<f:layout name="Default"/>
 
-	<f:section name="main">
+<f:section name="main">
 
-		<f:if condition="{carousel:isIconsPartialAlreadyLoaded()}">
-			<f:render section="Icons" partial="Icons"/>
-		</f:if>
+	<f:if condition="{carousel:isIconsPartialAlreadyLoaded()}">
+		<f:render section="Icons" partial="Icons"/>
+	</f:if>
 
-		<carousel:loadAssets/>
+	<carousel:loadAssets/>
+	<f:asset.script identifier="swiper-js" src="EXT:natural_carousel/Resources/Public/JavaScript/swiper.jquery.min.js" />
+	<f:asset.script identifier="natural-carousel-js" src="EXT:natural_carousel/Resources/Public/JavaScript/natural-carousel.min.js" />
+	<link rel="stylesheet" href="{f:uri.resource(path:'StyleSheets/natural.css', extensionName:'natural_carousel')}" type="text/css" />
+	<link rel="stylesheet" href="{f:uri.resource(path:'StyleSheets/swiper.min.css', extensionName:'natural_carousel')}" type="text/css" />
+	<link rel="stylesheet" href="{f:uri.resource(path:'StyleSheets/natural-carousel.min.css', extensionName:'natural_carousel')}" type="text/css" />
 
-		<script type="text/javascript">
-			window.naturalCarousels = window.naturalCarousels || [];
+	<script type="text/javascript">
+		window.naturalCarousels = window.naturalCarousels || [];
 
-			var slideHeight = Number('{settings.slideHeight -> f:format.raw()}');
-			var autoplay = Number('{settings.autoplay}');
-			var loop = '{settings.loop}' == true;
-			var slidesPerView = Number('{settings.slidesPerView}');
-			var spaceBetween = Number('{settings.margin}');
-			var speed = Number('{settings.speed}');
-			var blur = '{settings.blur}' == true;
-			var effect = '{settings.effect}';
+		var slideHeight = Number('{settings.slideHeight -> f:format.raw()}');
+		var autoplay = Number('{settings.autoplay}');
+		var loop = '{settings.loop}' == true;
+		var slidesPerView = Number('{settings.slidesPerView}');
+		var spaceBetween = Number('{settings.margin}');
+		var speed = Number('{settings.speed}');
+		var blur = '{settings.blur}' == true;
+		var effect = '{settings.effect}';
 
-			var naturalCarousel = {};
-			naturalCarousel.slides = {carousel:slideStack()->f:format.raw()};
+		var naturalCarousel = {};
+		naturalCarousel.slides = {carousel:slideStack()->f:format.raw()};
 
-			naturalCarousel.options = {
-				slideHeight: slideHeight,
-				autoplay: autoplay,
-				loop: loop,
-				slidesPerView: slidesPerView,
-				spaceBetween: spaceBetween,
-				speed: speed,
-				blur: blur,
-				effect: effect
-			};
+		naturalCarousel.options = {
+			slideHeight: slideHeight,
+			autoplay: autoplay,
+			loop: loop,
+			slidesPerView: slidesPerView,
+			spaceBetween: spaceBetween,
+			speed: speed,
+			blur: blur,
+			effect: effect
+		};
 
-			window.naturalCarousels.push(naturalCarousel);
-		</script>
+		window.naturalCarousels.push(naturalCarousel);
+	</script>
 
-		<div class="swiper-container natural-carousel"></div>
+	<div class="swiper-container natural-carousel"></div>
 
-	</f:section>
+</f:section>
 
 </html>

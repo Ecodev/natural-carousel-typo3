@@ -11,7 +11,7 @@
                 </TCEforms>
                 <type>array</type>
                 <el>
-                    <settings.images>
+                    <images>
                         <TCEforms>
                             <label>LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.images</label>
                             <config>
@@ -93,7 +93,7 @@
                                 </overrideChildTca>
                             </config>
                         </TCEforms>
-                    </settings.images>
+                    </images>
                 </el>
             </ROOT>
         </selection>

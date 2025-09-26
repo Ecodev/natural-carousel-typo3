@@ -1,13 +1,7 @@
 <?php
-if (!defined('TYPO3_MODE')) {
+if (!defined('TYPO3')) {
     die ('Access denied.');
 }
-
-\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-    'Fab.natural_carousel',
-    'Pi1',
-    'Natural Carousel'
-);
 
 $extensionName = \TYPO3\CMS\Core\Utility\GeneralUtility::underscoredToUpperCamelCase('natural_carousel');
 $pluginSignature = strtolower($extensionName) . '_pi1';

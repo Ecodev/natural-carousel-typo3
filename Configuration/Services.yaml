@@ -1,0 +1,12 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: true
+
+  Fab\NaturalCarousel\:
+    resource: '../Classes/*'
+    exclude: '../Classes/Domain/Model/*'
+
+  Fab\NaturalCarousel\Controller\CarouselController:
+    public: true
