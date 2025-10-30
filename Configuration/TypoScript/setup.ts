@@ -21,7 +21,7 @@ plugin.tx_naturalcarousel {
 				type = css
 
 				# Optional key if loading assets through EXT:vhs.
-				dependencies = mainCss
+				dependencies.1 = mainCss
 			}
 
 			NaturalCarouselCSS {
@@ -30,7 +30,7 @@ plugin.tx_naturalcarousel {
 				type = css
 
 				# Optional key if loading assets through EXT:vhs.
-				dependencies = mainCss
+				dependencies.1 = mainCss
 			}
 
 			NaturalCarouselThemeCSS {
@@ -39,7 +39,7 @@ plugin.tx_naturalcarousel {
 				type = css
 
 				# Optional key if loading assets through EXT:vhs.
-				dependencies = mainCss
+				dependencies.1 = mainCss
 			}
 
 			masterCss {
@@ -47,7 +47,7 @@ plugin.tx_naturalcarousel {
 				type = css
 
 				# Optional key if loading assets through EXT:vhs.
-				dependencies = mainCss
+				dependencies.1 = mainCss
 			}
 
 			SwiperJs {
@@ -55,7 +55,7 @@ plugin.tx_naturalcarousel {
 				type = js
 
 				# Optional key if loading assets through EXT:vhs.
-				dependencies = mainJs
+				dependencies.1 = mainJs
 			}
 
 			NaturalCarouselJS {
@@ -64,14 +64,14 @@ plugin.tx_naturalcarousel {
 				type = js
 
 				# Optional key if loading assets through EXT:vhs.
-				dependencies = mainJs
+				dependencies.1 = mainJs
 			}
 			masterJs {
 				path = EXT:natural_carousel/Resources/Public/JavaScript/master.js
 				type = js
 
 				# Optional key if loading assets through EXT:vhs.
-				dependencies = mainJs
+				dependencies.1 = mainJs
 			}
 		}
 
