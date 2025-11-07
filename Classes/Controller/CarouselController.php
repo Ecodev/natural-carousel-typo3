@@ -8,8 +8,8 @@ use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 class CarouselController extends ActionController
 {
-    protected array $configuration = array();
-    protected $settings = array();
+    protected array $configuration = [];
+    protected array $settings = [];
     protected ?FileRepository $fileRepository = null;
 
     public function __construct()
@@ -24,14 +24,14 @@ class CarouselController extends ActionController
     {
         $currentContentObject = $this->request->getAttribute('currentContentObject');
         $contentUid = $currentContentObject ? $currentContentObject->data['uid'] : 0;
-        
+
         $elements = $this->fileRepository->findByRelation('tt_content', 'images', $contentUid);
         $this->view->assignMultiple([
             'settings' => $this->settings,
             'data' => $currentContentObject ? $currentContentObject->data : [],
             'slides' => $elements
         ]);
-        
+
         return $this->htmlResponse();
     }
 
