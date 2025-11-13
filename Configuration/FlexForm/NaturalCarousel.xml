@@ -5,14 +5,11 @@
     <sheets>
         <selection>
             <ROOT>
-                <TCEforms>
                     <sheetTitle>LLL:EXT:natural_carousel/Resources/Private/Language/locallang.xlf:flexform.tab.source
                     </sheetTitle>
-                </TCEforms>
                 <type>array</type>
                 <el>
                     <images>
-                        <TCEforms>
                             <label>LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.images</label>
                             <config>
                                 <type>inline</type>
@@ -92,7 +89,6 @@
                                     </types>
                                 </overrideChildTca>
                             </config>
-                        </TCEforms>
                     </images>
                 </el>
             </ROOT>
@@ -100,10 +96,8 @@
 
         <sorting>
             <ROOT>
-                <TCEforms>
                     <sheetTitle>LLL:EXT:natural_carousel/Resources/Private/Language/locallang.xlf:flexform.tab.sorting
                     </sheetTitle>
-                </TCEforms>
                 <type>array</type>
                 <el>
                 </el>
@@ -112,13 +106,10 @@
 
         <slideSettings>
             <ROOT>
-                <TCEforms>
                     <sheetTitle>Slide settings</sheetTitle>
-                </TCEforms>
                 <type>array</type>
                 <el>
                     <settings.autoplay>
-                        <TCEforms>
                             <label>
                                 Wait time
                             </label>
@@ -126,19 +117,15 @@
                                 <type>input</type>
                                 <eval>trim</eval>
                             </config>
-                        </TCEforms>
                     </settings.autoplay>
                     <settings.speed>
-                        <TCEforms>
                             <label>Transition time</label>
                             <config>
                                 <type>input</type>
                                 <eval>trim</eval>
                             </config>
-                        </TCEforms>
                     </settings.speed>
                     <settings.loop>
-                        <TCEforms>
                             <label>
                                 Loop
                             </label>
@@ -146,11 +133,9 @@
                                 <type>check</type>
                                 <default>1</default>
                             </config>
-                        </TCEforms>
                     </settings.loop>
 
                     <settings.blur>
-                        <TCEforms>
                             <label>
                                 Blur
                             </label>
@@ -158,10 +143,8 @@
                                 <type>check</type>
                                 <default>0</default>
                             </config>
-                        </TCEforms>
                     </settings.blur>
                     <settings.effect>
-                        <TCEforms>
                             <label>
                                 Effect
                             </label>
@@ -203,10 +186,8 @@
                                 <minitems>0</minitems>
                                 <maxitems>1</maxitems>
                             </config>
-                        </TCEforms>
                     </settings.effect>
                     <settings.slidesPerView>
-                        <TCEforms>
                             <label>
                                 Slides per view
                             </label>
@@ -215,10 +196,8 @@
                                 <default>1</default>
                                 <eval>trim</eval>
                             </config>
-                        </TCEforms>
                     </settings.slidesPerView>
                     <settings.slideHeight>
-                        <TCEforms>
                             <label>
                                 Slide height
                             </label>
@@ -227,12 +206,9 @@
                                 <default>400</default>
                                 <eval>trim</eval>
                             </config>
-                        </TCEforms>
                     </settings.slideHeight>
                 </el>
             </ROOT>
         </slideSettings>
-
-
     </sheets>
 </T3DataStructure>
