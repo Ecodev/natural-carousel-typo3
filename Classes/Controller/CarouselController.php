@@ -9,7 +9,6 @@ use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 class CarouselController extends ActionController
 {
     protected array $configuration = [];
-    protected array $settings = [];
     protected ?FileRepository $fileRepository = null;
 
     public function __construct()
