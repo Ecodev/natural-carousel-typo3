@@ -19,7 +19,7 @@ call_user_func(
 
         // Register icons
         $icons = [
-            'content-natural-carousel' => 'EXT:natural_carousel/ext_icon.png',
+            'content-natural-carousel' => 'EXT:natural_carousel/Resources/Public/Icons/ext_icon.png',
         ];
         $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
         foreach ($icons as $identifier => $path) {
